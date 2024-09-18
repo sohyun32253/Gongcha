@@ -1,0 +1,114 @@
+.main{
+    width: 100%;
+}
+
+.menu_banner{
+    background: url(../src/images/menu_banner.jpg) no-repeat;
+    background-size: cover;
+    width: 1920px;
+    height: 260px;
+    margin: 0 auto;
+    padding: 90px 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.menu_banner h2,.menu_banner p{
+    color: #ffffff;
+}
+
+.menu_banner h2{
+    position: absolute;
+    left: 120px;
+}
+
+.menu_banner p{
+    position: absolute;
+    left: 125px;
+    bottom: 80px;
+}
+
+.menu_gnb{
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.menu_gnb ul{
+    display: flex;
+}
+
+.menu_gnb li{
+    width: 160px;
+    height: 50px;
+   display: flex;
+   justify-content: center;
+   text-align: center;
+    border: 1px solid #C30F30;
+    border-right: none;
+    cursor: pointer;
+}
+
+.menu_gnb li:hover{
+    background: #C30F30;
+    transition: all 0.3s;
+}
+
+.menu_gnb li:hover button{
+    color: #ffffff;
+}
+
+.menu_gnb li:last-child{
+    border-right: 1px solid #C30F30;
+}
+
+.menu_gnb button{
+    background: none;
+    border: none;
+    color: #C30F30;
+}
+
+.menu h3{
+    width: 1280px;
+    margin: 40px auto;
+    font-weight: bold;
+}
+
+.menu_default{
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.menu_default h4{
+    margin: 40px 0;
+    text-align: center;
+    color: #C30F30;
+    font-weight: bold;
+}
+
+.menu_default ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu_default button{
+    width: 305px;
+    border: none;
+    background: none;
+    border: 1px solid #e1e1e1;
+}
+
+.menu_default button:hover{
+    box-shadow: 0 0 0 1px #C30F30 inset;
+    transition: all 0.3s;
+}
+
+.menu_default img{
+    width: 255px;
+    margin-bottom: 30px;
+}
+
+.menu_default button p{
+    font-size: 17px;
+    color: #000000;
+    font-weight: bold;
+}

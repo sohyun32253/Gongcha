@@ -1,16 +1,17 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import CountUp from 'react-countup';
+import { Link } from 'react-router-dom';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import {  Autoplay,Navigation,Pagination } from 'swiper/modules';
 import Carousel from 'react-bootstrap/Carousel';
 import '../ContentStyle.css'
-import topBtn from '../images/arrow_up.svg';
 import franchise from '../images/franchise_consult.svg';
 import customer from '../images/customer_consult.svg';
 import appDownload from '../images/download_app.svg';
+import topBtn from '../images/arrow_up.svg';
 import main01 from '../images/main_01.jpeg';
 import main02 from '../images/main_02.jpg';
 import main03 from '../images/main_03.jpg';
@@ -31,6 +32,7 @@ import teaReceipe02 from '../images/tea_receipe_02.jpg'
 import teaReceipe03 from '../images/tea_receipe_03.jpg'
 import arrowForward from '../images/arrow_forward.svg'
 import order01 from '../images/order_01.png'
+import orderArrow from '../images/order_arrow.svg'
 import store01 from '../images/store_01.png'
 import search from '../images/search_default.svg'
 import global from '../images/global_right.png'
@@ -40,6 +42,7 @@ import sns01 from '../images/sns_01.png'
 import sns02 from '../images/sns_02.png'
 import sns03 from '../images/sns_03.png'
 import sns04 from '../images/sns_04.png'
+
 
 function Content() {
   const [index, setIndex] = useState(0);
@@ -150,40 +153,44 @@ useEffect(() => {
   return (
     <main className='main'>
       <ul className='quick_menu'>
-        <li onClick={scrollToTop}>
-          <button className='top_btn'>
-            <span><img src={topBtn} alt="위로 이동하기" /></span>
-            <span className='btn_txt_top'>Top</span>
+        <li className='franchise'>
+          <a href="#none">
+            <img src={franchise} alt="가맹점 문의"/>
+            <p>가맹 문의</p>
+
+            <div className='quick_hover'>
+              <p>가맹점 문의<br/>
+              02-3276-9581
+              </p>
+            </div>
+          </a>
+        </li>
+
+        <li className='customer'>
+          <a href="#none">
+            <img src={customer} alt="고객문의"/>
+            <p>고객 문의</p>
+
+            <div className='quick_hover'>
+              <p>대표 전화<br/>
+              02-779-7758
+              </p>
+            </div>
+          </a>
+        </li>
+
+        <li className='download'>
+          <a href="#none">
+            <img src={appDownload} alt="앱 다운로드"/>
+            <p>앱 다운로드</p>
+          </a>
+        </li>
+
+        <li className='top_btn'>
+          <button onClick={scrollToTop}>
+            <img src={topBtn} alt="위로가기"/>
+            <p>Top</p>
           </button>
-        </li>
-
-        <li className='btn_hover'>
-          <a href="#none">
-          <span className='btn_content'>
-            <span className='btn_hidden'>가맹점 문의<br/>
-            02-779-7758</span>
-            <span><img src={franchise} alt="가맹점 문의" /></span>
-            </span>
-            <span className='btn_txt'>가맹 문의</span>
-          </a>
-        </li>
-
-        <li className='btn_hover'>
-          <a href="#none">
-          <span className='btn_content'>
-            <span className='btn_hidden'>대표 전화<br/>
-            02-779-7758</span>
-            <span><img src={customer} alt="고객문의" /></span>
-            </span>
-            <span className='btn_txt'>고객 문의</span>
-          </a>
-        </li>
-
-        <li>
-          <a href="#none">
-            <span><img src={appDownload} alt="앱다운로드" /></span>
-            <span className='btn_txt_last'>앱 설치</span>
-          </a>
         </li>
       </ul>
 
@@ -353,10 +360,12 @@ useEffect(() => {
             </dl>
           </div>)}
 
+          <a href='#none'>
           <button>
-            메뉴 보러가기
-            <img src={arrowForward} alt="티레시피 보러가기" />
+            레시피 보러가기
+            <span> > </span>
             </button>
+            </a>
         </div>   
       </div>   
     </section>
@@ -372,7 +381,7 @@ useEffect(() => {
                     나만의 메뉴를 만들어보세요.</p>
                 </div>
                 <button>자세히 보기
-                    <img src={arrowForward} className='order_right' alt="주문하기 바로가기" />
+                    <span> > </span>
                 </button>
                   <img src={order01} alt="음료 이미지" />
             </div>

@@ -58,11 +58,11 @@ section{
     opacity: 1;
 }
 
-/* quick menu (수정 중) */
+
 .quick_menu{
     position: fixed;
     z-index: 100;
-    right: 0;
+    right: 20px;
     top: 150px;
     cursor: pointer;
 }
@@ -76,8 +76,8 @@ section{
     height: 90px;
     margin-bottom: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
-    overflow: hidden; /* 자식 요소가 벗어나지 않도록 함 */
-    transition: width 0.3s ease; /* width 변화에 애니메이션 적용 */
+    overflow: hidden; 
+    transition: width 0.3s ease; 
 }
 
 .quick_menu img{
@@ -85,21 +85,55 @@ section{
     position: absolute;
     top: 16px;
     left: 30px;
+} 
+
+.quick_menu p{
+    font-size: 14px;
+    position: absolute;
+    left:12px;
+    bottom: 20px;
+    color: #ffffff;
 }
+
+.quick_menu .download p{
+    left: 8px;
+}
+
+.quick_menu .top_btn{
+    background: #ffffff;
+    border: 1px solid #C30F30;
+}
+
+.quick_menu .top_btn p{
+    color: #C30F30;
+    left: 30px;
+}
+
+.quick_menu .top_btn button{
+    border: none;
+    background: none;
+}
+
+.quick_hover{
+    opacity: 0;
+}
+
+
+/*
 
 .top_btn{
     border: none;
     background: none;  
 }
 
-.main .quick_menu li:first-child{
+.main .quick_menu li:last-child{
     background: #ffffff;
     border: 1px solid #C30F30;
 }
 
-.main .quick_menu li:first-child .btn_txt_top{
+.main .quick_menu li:last-child .btn_txt_top{
     color: #C30F30;
-}
+} 
 
 .btn_txt_top{
     position: absolute;
@@ -109,17 +143,17 @@ section{
 }
 
 .btn_flex{
-    display: flex; /* 수정: block에서 flex로 변경하여 유연한 레이아웃 */
-    align-items: center; /* 수직 정렬 */
-    justify-content: center; /* 수평 정렬 */
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
 }
 
 .btn_hidden{
     position: absolute;
     top: 30px;
-    left: 100%; /* 버튼 오른쪽 끝으로 위치 설정 */
-    white-space: nowrap; /* 텍스트가 한 줄로 보이도록 설정 */
-    transition: left 0.3s ease; /* 위치 변화에 애니메이션 적용 */
+    left: -100px; 
+    white-space: nowrap;
+    transition: left 0.3s ease; 
 }
 
 .btn_txt{
@@ -135,20 +169,25 @@ section{
     left: 18px;
 }
 
+.btn_hover a{
+    display: block;
+}
+
+
+
 .btn_hover:hover {
-    width: 180px; /* hover 시 버튼의 가로 길이 조정 */
+    width: 180px; 
 }
 
 .btn_hover:hover .btn_hidden {
-    display: block;
-    left: 10px; /* hover 시에 왼쪽으로 이동하여 텍스트가 보이도록 설정 */
+    left: 0; 
 }
 
 
 .btn_hover:hover .btn_content {
-    transform: translateX(90px); /* 오른쪽으로 이동하여 버튼의 오른쪽으로 벗어나도록 설정 */
+    transform: translateX(90px); 
 }
-
+*/
 /* new_menu */
 
 .new_menu_cont{
@@ -338,9 +377,8 @@ dt{
     transition: all 0.3s;
 }
 
-.tea_receipe_cont button img{
-    width: 18px;
-    margin-left: 50px;
+.tea_receipe_cont button span{
+    margin-left: 40px;
 }
 
 /* order&store  */
@@ -398,16 +436,18 @@ dt{
 }
 
 .order button{
-    width: 180px;
-    height: 40px;
+   padding:10px 25px 10px 20px;
+   box-sizing: border-box;
     font-size: 16px;
     border: 1px solid #ffffff;
     box-sizing: border-box;
     color: #ffffff;
-    border-radius: 15px;
+    border-radius: 20px;
     position: absolute;
     bottom: 40px;
     background: none;
+    display: flex;
+    align-items: center;
 }
 
 .order button:hover{
@@ -418,8 +458,8 @@ dt{
 }
 
 
-.order button img{
-    margin-left: 40px;
+.order button span{
+    margin-left: 45px;
 }
 
 .store{
@@ -432,6 +472,13 @@ dt{
     align-items: center;
     border-radius: 20px;
     position: relative;
+}
+
+.store h3{
+    font-size: 28px;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 30px;
 }
 
 .store img{
@@ -448,6 +495,7 @@ dt{
 }
 
 .store input{
+    width: 275px;
     padding: 10px 20px;
     box-sizing: border-box;
     border-radius: 50px;
@@ -456,7 +504,7 @@ dt{
 
 .store button{
     position: absolute;
-    top: 7px;
+    top: 10px;
     right: 22px;
     border: none;
     background: none;
@@ -764,6 +812,11 @@ dt{
     .store{
         width: 100%;
         display: block;
+    }
+
+    .store form img{
+        position: absolute;
+        bottom: -5px;
     }
 
     .store form{

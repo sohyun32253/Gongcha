@@ -42,9 +42,66 @@ import newMenu38 from '../images/new_menu_38.png'
 import newMenu39 from '../images/new_menu_39.png'
 import newMenu40 from '../images/new_menu_40.png'
 import newMenu41 from '../images/new_menu_41.png'
+import bestSeller01 from '../images/best_seller_01.png'
+import bestSeller02 from '../images/best_seller_02.png'
+import bestSeller03 from '../images/best_seller_03.png'
+import bestSeller04 from '../images/best_seller_04.png'
+import bestSeller05 from '../images/best_seller_05.png'
+import milkTea01 from '../images/milk_tea_01.png'
+import milkTea02 from '../images/milk_tea_02.png'
+import milkTea03 from '../images/milk_tea_03.png'
+import milkTea04 from '../images/milk_tea_04.png'
+import milkTea05 from '../images/milk_tea_05.png'
+import milkTea06 from '../images/milk_tea_06.png'
+import milkTea07 from '../images/milk_tea_07.png'
+import milkTea08 from '../images/milk_tea_08.png'
+import milkTea09 from '../images/milk_tea_09.png'
+import smoothie01 from '../images/smoothie_01.png'
+import smoothie02 from '../images/smoothie_02.png'
+import smoothie03 from '../images/smoothie_03.png'
+import smoothie04 from '../images/smoothie_04.png'
+import smoothie05 from '../images/smoothie_05.png'
+import smoothie06 from '../images/smoothie_06.png'
+import smoothie07 from '../images/smoothie_07.png'
+import smoothie08 from '../images/smoothie_08.png'
+import smoothie09 from '../images/smoothie_09.png'
+import smoothie10 from '../images/smoothie_10.png'
+import smoothie11 from '../images/smoothie_11.png'
+import tea01 from '../images/tea_01.png'
+import tea02 from '../images/tea_02.png'
+import tea03 from '../images/tea_03.png'
+import tea04 from '../images/tea_04.png'
+import tea05 from '../images/tea_05.png'
+import tea06 from '../images/tea_06.png'
+import tea07 from '../images/tea_07.png'
+import tea08 from '../images/tea_08.png'
+import fruitTea01 from '../images/fruit_tea_01.png'
+import fruitTea02 from '../images/fruit_tea_02.png'
+import fruitTea03 from '../images/fruit_tea_03.png'
+import fruitTea04 from '../images/fruit_tea_04.png'
+import fruitTea05 from '../images/fruit_tea_05.png'
+import fruitTea06 from '../images/fruit_tea_06.png'
+import fruitTea07 from '../images/fruit_tea_07.png'
+import fruitTea08 from '../images/fruit_tea_08.png'
+import fruitTea09 from '../images/fruit_tea_09.png'
+import fruitTea10 from '../images/fruit_tea_10.png'
+import rtd01 from '../images/rtd_01.png'
+import rtd02 from '../images/rtd_02.png'
+import rtd03 from '../images/rtd_03.png'
+import rtd04 from '../images/rtd_04.png'
+import coffee01 from '../images/coffee_01.png'
+import coffee02 from '../images/coffee_02.png'
+import coffee03 from '../images/coffee_03.png'
+import coffee04 from '../images/coffee_04.png'
+import coffee05 from '../images/coffee_05.png'
+
 
 function MenuDrink() {
+    const [selectedCategoryBtn, setSelectedCategoryBtn] = useState('NEW 시즌메뉴')
     const [selectedMenu,setSelectedMenu] = useState(null);
+    const [activeCategory, setActiveCategory] = useState('NEW 시즌메뉴'); 
+    
+    
     const menuItems = [
         { 
           id: 1, 
@@ -505,14 +562,1539 @@ function MenuDrink() {
         },
         {
           id: 27, 
-          title: '초당 옥수수 밀크티 + 펄', 
-          description: '여름철 대표 간식 “초당옥수수”에 공차의 매력적인 펄과 블랙티를 더하여 시원하게 즐기는 시즌 한정 밀크티', 
-          image: newMenu22, 
-          L_price: 'Large 5,100원',
-          isLargeAvailable: false,
+          title: '미니펄 트리플 딸기 크러쉬', 
+          description: '딸기를 3배로 왕창 넣어 더욱 풍성해진 미니펄 딸기 크러쉬', 
+          image: newMenu23, 
+          L_price: '기본 7,100원'
+        },
+        {
+          id: 28, 
+          title: '미니펄 더블 딸기 크러쉬', 
+          description: '딸기를 2배로 듬뿍 넣어 더욱 풍성해진 미니펄 딸기 크러쉬', 
+          image: newMenu24, 
+          L_price: '기본 6,400원'
+        },
+        {
+          id: 29, 
+          title: '미니펄 트리플 망고 크러쉬', 
+          description: '망고를 3배로 왕창 넣어 더욱 풍성해진 미니펄 망고 크러쉬', 
+          image: newMenu25, 
+          L_price: '기본 7,100원'
+        },
+        {
+          id: 30, 
+          title: '미니펄 더블 망고 크러쉬', 
+          description: '망고를 2배로 듬뿍 넣어 더욱 풍성해진 미니펄 망고 크러쉬', 
+          image: newMenu26, 
+          L_price: '기본 6,400원'
+        },
+        {
+          id: 31, 
+          title: '미니펄 트리플 딸기 밀크티', 
+          description: '딸기를 3배로 왕창 넣어 더욱 풍성해진 미니펄 딸기 밀크티', 
+          image: newMenu27, 
+          L_price: '기본 6,700원'
+        },
+        {
+          id: 32, 
+          title: '미니펄 더블 딸기 밀크티', 
+          description: '딸기를 2배로 듬뿍 넣어 더욱 풍성해진 미니펄 딸기 밀크티', 
+          image: newMenu28, 
+          L_price: '기본 6,000원'
+        },
+        {
+          id: 33, 
+          title: '미니펄 트리플 망고 밀크', 
+          description: '망고를 3배로 왕창 넣어 더욱 풍성해진 미니펄 망고 밀크', 
+          image: newMenu29, 
+          L_price: '기본 6,700원'
+        },
+        {
+          id: 34, 
+          title: '미니펄 더블 망고 밀크', 
+          description: '망고를 2배로 듬뿍 넣어 더욱 풍성해진 미니펄 망고 밀크', 
+          image: newMenu30, 
+          L_price: '기본 6,000원'
+        },
+        { 
+          id: 35, 
+          title: '청포도 크림치즈폼', 
+          description: '새콤 달콤한 청포도 음료를 산뜻하고 부드러운 크림치즈폼과 함께 시원하게 무더운 여름철에 즐길 수 있는 프룻티', 
+          image: newMenu31, 
+          L_price: 'Large 5,300원',
+          L_kcal: '322kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'40g',
+          L_protein:'1g',
+          L_fat: '7g',
+          L_natrium: '170mg',
+          L_caffeine: '24mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 36, 
+          title: '블랙 사파이어 포도 크림치즈폼', 
+          description: '달콤하게 즐길 수있는 블랙사파이어 음료를 산뜻하고 부드러운 크림치즈폼과 함께 시원하게 무더운 여름철에 즐길 수 있는 프룻티', 
+          image: newMenu32, 
+          L_price: 'Large 5,300원',
+          L_kcal: '305kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'37g',
+          L_protein:'1g',
+          L_fat: '6g',
+          L_natrium: '207mg',
+          L_caffeine: '85mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 37, 
+          title: '꿀 복숭아 스무디', 
+          description: '아삭하게 씹히는 복숭아 원물에 달콤한 꿀과 고소한 우롱티를 더해 특별하게 즐기는 시즌 한정 스무디', 
+          image: newMenu33, 
+          L_price: 'Large 5,300원',
+          L_kcal: '344kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 복숭아',
+          L_size:'473ml',
+          L_sugar:'52g',
+          L_protein:'1g',
+          L_fat: '4g',
+          L_natrium: '66mg',
+          L_caffeine: '36mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 38, 
+          title: '꿀 복숭아 밀크티', 
+          description: '아삭하게 씹히는 복숭아 원물에 달콤한 꿀과 고소한 우롱티를 더해 특별하게 즐기는 시즌 한정 밀크티', 
+          image: newMenu34, 
+          L_price: 'Large 4,900원',
+          L_kcal: '287kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 복숭아',
+          L_size:'473ml',
+          L_sugar:'42g',
+          L_protein:'6g',
+          L_fat: '3g',
+          L_natrium: '67mg',
+          L_caffeine: '40mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 39, 
+          title: '꿀 복숭아 밀크', 
+          description: '아삭하게 씹히는 복숭아 원물을 꿀과 함께 조화롭게 즐기는 카페인 프리 복숭아 라떼', 
+          image: newMenu35, 
+          L_price: 'Large 4,500원',
+          L_kcal: '280kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 복숭아',
+          L_size:'473ml',
+          L_sugar:'33g',
+          L_protein:'7g',
+          L_fat: '4g',
+          L_natrium: '81mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 40, 
+          title: '꿀 망고 밀크', 
+          description: '달콤한 망고와 꿀을 조화롭게 즐길 수 있는 카페인 프리 망고 라떼', 
+          image: newMenu36, 
+          L_price: 'Large 4,500원',
+          L_kcal: '286kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 복숭아',
+          L_size:'473ml',
+          L_sugar:'36g',
+          L_protein:'7g',
+          L_fat: '5g',
+          L_natrium: '84mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 41, 
+          title: '꿀 딸기 밀크', 
+          description: '상큼한 딸기와 달콤한 꿀을 조화롭게 즐길 수있는 카페인 프리 딸기 라떼', 
+          image: newMenu37, 
+          L_price: 'Large 4,500원',
+          L_kcal: '282kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'35g',
+          L_protein:'7g',
+          L_fat: '5g',
+          L_natrium: '75mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 42, 
+          title: '미니펄 망고 밀크', 
+          description: '신선한 코코넛 밀크에 달콤한 애플 망고와 쫄깃한 코코넛젤리,쫀득한 미니펄까지 더해 풍성하게 즐기는 시즌 한정 음료', 
+          image: newMenu38, 
+          L_price: 'Large 5,300원',
+          L_kcal: '271kcal',
+          warning: '* 알레르기 유발 식품 : 우유',
+          L_size:'473ml',
+          L_sugar:'26g',
+          L_protein:'7g',
+          L_fat: '6g',
+          L_natrium: '77mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 43, 
+          title: '미니펄 딸기 밀크티', 
+          description: '신선한 코코넛 밀크에 향긋한 얼그레이티를 블렌딩하고 상큼한 딸기 슬라이스와 쫄깃한 코코넛젤리,쫀득한 미니펄까지 더해 풍성하게 즐기는 시즌 한정 음료', 
+          image: newMenu39, 
+          L_price: 'Large 5,300원',
+          L_kcal: '258kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'31g',
+          L_protein:'4g',
+          L_fat: '4g',
+          L_natrium: '53mg',
+          L_caffeine: '44mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 44, 
+          title: '미니펄 망고 크러쉬', 
+          description: '신선한 코코넛 크러쉬에 달콤한 애플 망고와쫀득한 미니펄을 더해 특별하게 즐기는 시즌 한정 음료', 
+          image: newMenu41, 
+          L_price: 'Large 5,700원',
+          L_kcal: '373kcal',
+          warning: '* 알레르기 유발 식품 : 우유',
+          L_size:'473ml',
+          L_sugar:'34g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '94mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 45, 
+          title: '미니펄 딸기 크러쉬', 
+          description: '신선한 코코넛 크러쉬에 상큼한 딸기 슬라이스와 딸기 시럽, 쫀득한 미니펄을 더해 특별하게 즐기는 시즌 한정 음료', 
+          image: newMenu40, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 46, 
+          title: '우롱티 + 코코넛 + 밀크폼', 
+          description: '깊고 고소한 우롱차에 코코넛 젤리와 달콤짭쪼름한 밀크폼을 올려 다양한 식감과 함께 부드럽게 즐기는 오리지널티', 
+          image: bestSeller01, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 47, 
+          title: '우롱티 + 코코넛 + 밀크폼 (HOT)', 
+          description: '깊고 고소한 우롱차에 코코넛 젤리와 달콤짭쪼름한 밀크폼을 올려 다양한 식감과 함께 부드럽게 즐기는 오리지널티', 
+          image: bestSeller01, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 48, 
+          title: '초콜렛 밀크티 + 밀크폼', 
+          description: '부드러운 밀크에 녹아든 진한 초콜렛을 느낄 수 있는 초콜렛 밀크티와 달콤짭쪼름한 밀크폼', 
+          image: bestSeller02, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 49, 
+          title: '초콜렛 밀크티 + 밀크폼 (HOT)', 
+          description: '부드러운 밀크에 녹아든 진한 초콜렛을 느낄 수 있는 초콜렛 밀크티와 달콤짭쪼름한 밀크폼', 
+          image: bestSeller02, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 50, 
+          title: '블랙 밀크티 + 펄', 
+          description: '공차 대표 메뉴 블랙밀크티와 쫄깃쫄깃한 펄의 콤비네이션', 
+          image: bestSeller03, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 51, 
+          title: '블랙 밀크티 + 펄 (HOT)', 
+          description: '공차 대표 메뉴 블랙밀크티와 쫄깃쫄깃한 펄의 콤비네이션', 
+          image: bestSeller03, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 52, 
+          title: '망고 요구르트 + 화이트펄', 
+          description: '달콤한 망고 과육과 요구르트에 화이트펄의 꼬들꼬들함이 느껴지는 주스', 
+          image: bestSeller04, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 53, 
+          title: '딸기 쿠키 스무디 + 펄', 
+          description: '얼그레이티로 만든 밀크 스무디에 달콤한 딸기와 바삭한 쿠키를 더한 스무디와 쫄깃쫄깃한 펄', 
+          image: bestSeller05, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 54, 
+          title: '블랙 밀크티', 
+          description: '진한 향과 맛을 느낄 수 있는 블랙티(홍차)와 밀크의 만남 (HOT / ICED)​', 
+          image: milkTea01, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 55, 
+          title: '블랙 밀크티 (HOT)', 
+          description: '진한 향과 맛을 느낄 수 있는 블랙티(홍차)와 밀크의 만남 (HOT / ICED)​', 
+          image: milkTea01, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 56, 
+          title: '얼그레이 밀크티', 
+          description: '베르가못 향의 얼그레이티(홍차)와 밀크가 부드러운 조화를 이루는 밀크티 (HOT / ICED)​', 
+          image: milkTea02, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 57, 
+          title: '얼그레이 밀크티 (HOT)', 
+          description: '베르가못 향의 얼그레이티(홍차)와 밀크가 부드러운 조화를 이루는 밀크티 (HOT / ICED)​', 
+          image: milkTea02, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 58, 
+          title: '우롱 밀크티', 
+          description: '묵직하고 깊은 향의 우롱차에 밀크가 더해진 우롱밀크티 (HOT / ICED)​', 
+          image: milkTea03, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 59, 
+          title: '우롱 밀크티 (HOT)', 
+          description: '묵직하고 깊은 향의 우롱차에 밀크가 더해진 우롱밀크티 (HOT / ICED)​', 
+          image: milkTea03, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 60, 
+          title: '초콜렛 밀크티', 
+          description: '부드러운 밀크에 녹아든 진한 초콜렛을 느낄 수 있는 초콜렛 밀크티 (HOT / ICED)', 
+          image: milkTea04, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 61, 
+          title: '초콜렛 밀크티 (HOT)', 
+          description: '부드러운 밀크에 녹아든 진한 초콜렛을 느낄 수 있는 초콜렛 밀크티 (HOT / ICED)', 
+          image: milkTea04, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 62, 
+          title: '자스민 밀크티', 
+          description: '향긋한 꽃 향이 느껴지는 자스민티를 부드럽게 즐기는 밀크티', 
+          image: milkTea05, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 63, 
+          title: '자스민 밀크티 (HOT)', 
+          description: '향긋한 꽃 향이 느껴지는 자스민티를 부드럽게 즐기는 밀크티', 
+          image: milkTea05, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 64, 
+          title: '타로 밀크티', 
+          description: '타로의 고소함과 밀크의 조합 (HOT / ICED)​', 
+          image: milkTea06, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 65, 
+          title: '타로 밀크티 (HOT)', 
+          description: '타로의 고소함과 밀크의 조합 (HOT / ICED)​', 
+          image: milkTea06, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 66, 
+          title: '제주 그린 밀크티', 
+          description: '제주 녹차를 사용하여 쌉싸름한 맛과 달콤한 맛이 어우러진 밀크티', 
+          image: milkTea07, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 67, 
+          title: '제주 그린 밀크티 (HOT)', 
+          description: '제주 녹차를 사용하여 쌉싸름한 맛과 달콤한 맛이 어우러진 밀크티', 
+          image: milkTea07, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 68, 
+          title: '브라운슈가 쥬얼리 밀크티', 
+          description: '부드럽고 달콤한 브라운 슈가 쥬얼리와 신선한 우유의 맛이 느껴지는 밀크티', 
+          image: milkTea08, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 69, 
+          title: '브라운슈가 쥬얼리 밀크티 (HOT)', 
+          description: '부드럽고 달콤한 브라운 슈가 쥬얼리와 신선한 우유의 맛이 느껴지는 밀크티', 
+          image: milkTea08, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 70, 
+          title: '딸기 쥬얼리 밀크티', 
+          description: '얼그레이티로 만든 밀크티에 리얼 딸기 과즙이 함유된 새콤달콤한 딸기 쥬얼리를 더한 음료 (딸기 함량 UP!) (ONLY ICED)', 
+          image: milkTea09, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 71, 
+          title: '밀크 쿠앤크 스무디', 
+          description: '달콤하고 바삭한 쿠키가 가득 들어간 밀크 스무디', 
+          image: smoothie01, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 72, 
+          title: '브라운슈가 쥬얼리 치즈폼 스무디', 
+          description: '부드럽고 달콤한 브라운 슈가 쥬얼리와 달콤짭조름한 치즈폼을 더한 스무디', 
+          image: smoothie02, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 73, 
+          title: '딸기 쿠키 스무디', 
+          description: '얼그레이티로 만든 밀크 스무디에 달콤한 딸기와 바삭한 쿠키를 더한 스무디', 
+          image: smoothie03, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 74, 
+          title: '초코멜로 스무디', 
+          description: '깊은 풍미의 초콜렛 스무디', 
+          image: smoothie04, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 75, 
+          title: '제주 그린 스무디', 
+          description: '녹차가루와 부드러운 밀크폼을 함께 즐길 수 있는 제주 그린 스무디', 
+          image: smoothie05, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 76, 
+          title: '청포도 스무디', 
+          description: '시원달콤한 청포도과즙과 알로에 알갱이가 쏙쏙 들어오는 재미가 일품인 청포도 스무디', 
+          image: smoothie06, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 77, 
+          title: '망고 스무디', 
+          description: '농축된 달콤한 망고와 밀크를 함께 갈아만든 망고 스무디(ONLY ICED)', 
+          image: smoothie07, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 78, 
+          title: '초콜렛 쿠키&크림 스무디', 
+          description: '진한 초코 스무디에 바삭한 쿠키와 밀크폼이 더해진 스무디', 
+          image: smoothie08, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 79, 
+          title: '딸기 쥬얼리 요구르트 크러쉬', 
+          description: '얼그레이티를 넣어 만든 요구르트 크러쉬에 리얼 딸기 과즙이 함유된 새콤달콤한 딸기 쥬얼리를 더한 음료 (ONLY ICED)', 
+          image: smoothie09, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 80, 
+          title: '타로 스무디', 
+          description: '고소한 타로가 듬뿍 들어가 진하고 달콤하게 즐길 수 있는 시즌 컴백 한정 음료', 
+          image: smoothie10, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 81, 
+          title: '레몬 요구르트 스무디', 
+          description: '상큼한 레몬 베이스에 달콤한 요구르트가 함께 어우려져 시원하게 즐길 수 있는 시즌 컴백 한정 음료', 
+          image: smoothie11, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 82, 
+          title: '자스민티', 
+          description: '향긋한 꽃향이 느껴지는 싱그럽고 부드러운 자스민티', 
+          image: tea01, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 83, 
+          title: '자스민티 (HOT)', 
+          description: '향긋한 꽃향이 느껴지는 싱그럽고 부드러운 자스민티', 
+          image: tea01, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 84, 
+          title: '블랙티', 
+          description: '진한 향과 감미로운 맛을 느낄 수있는 대표적인 홍차, 블랙티 (HOT / ICED)​', 
+          image: tea02, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 85, 
+          title: '블랙티 (HOT)', 
+          description: '진한 향과 감미로운 맛을 느낄 수있는 대표적인 홍차, 블랙티 (HOT / ICED)​', 
+          image: tea02, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 86, 
+          title: '블랙 스파클링 티', 
+          description: '탄산이 톡톡! 청량한 탄산으로 색다르게 즐기는 진하고 감미로운 향의 블랙 스파클링 티', 
+          image: tea03, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 87, 
+          title: '얼그레이티', 
+          description: '향긋한 베르가못향이 가미된 얼그레이티 (HOT / ICED)​', 
+          image: tea04, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 88, 
+          title: '얼그레이티 (HOT)', 
+          description: '향긋한 베르가못향이 가미된 얼그레이티 (HOT / ICED)​', 
+          image: tea04, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 89, 
+          title: '얼그레이 스파클링 티', 
+          description: '탄산이 톡톡! 청량한 탄산으로 색다르게 즐기는 향긋한 베르가못 향 얼그레이 스파클링 티', 
+          image: tea05, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 90, 
+          title: '우롱티', 
+          description: '묵직하고 깊은 향을 간직한 고소한 우롱차 (HOT / ICED)​', 
+          image: tea06, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 91, 
+          title: '우롱티 (HOT)', 
+          description: '묵직하고 깊은 향을 간직한 고소한 우롱차 (HOT / ICED)​', 
+          image: tea06, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 92, 
+          title: '우롱 스파클링 티', 
+          description: '탄산이 톡톡! 청량한 탄산으로 색다르게 즐기는 묵직하고 깊은 향의 우롱 스파클링 티', 
+          image: tea07, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 93, 
+          title: '자스민 스파클링 티', 
+          description: '향긋한 꽃 향을 그대로 담은 오리지널 수제 스파클링 티', 
+          image: tea08, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 94, 
+          title: '망고 요구르트', 
+          description: '농축된 달콤한 망고의 입자와 새콤한 요구르트의 조합, 망고 요구르트', 
+          image: fruitTea01, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 95, 
+          title: '자몽 요구르트', 
+          description: '달콤하고 쌉싸름한 자몽과 새콤한 요구르트의 조합', 
+          image: fruitTea02, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 96, 
+          title: '망고 주스', 
+          description: '농축된 달콤한 망고의 입자가 느껴지는 달콤한 망고 주스', 
+          image: fruitTea03, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 97, 
+          title: '자스민 요구르트', 
+          description: '향긋한 자스민티에 새콤달콤한 요구르트의 조합', 
+          image: fruitTea04, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 98, 
+          title: '레몬 자스민티', 
+          description: '상큼한 레몬 베이스와 로즈마리가 만드는 새로운 하모니의 자스민 과일 티', 
+          image: fruitTea05, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 99, 
+          title: '레몬 자스민티 (HOT)', 
+          description: '상큼한 레몬 베이스와 로즈마리가 만드는 새로운 하모니의 자스민 과일 티', 
+          image: fruitTea05, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 100, 
+          title: '레몬 요구르트', 
+          description: '상큼한 레몬 베이스에 새콤달콤한 요구르트의 조합', 
+          image: fruitTea06, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 101, 
+          title: '자몽 자스민티', 
+          description: '달콤하고 쌉싸름한 자몽과 로즈마리가 만드는 새로운 하모니의 자스민 과일 티', 
+          image: fruitTea07, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 102, 
+          title: '자몽 자스민티 (HOT)', 
+          description: '달콤하고 쌉싸름한 자몽과 로즈마리가 만드는 새로운 하모니의 자스민 과일 티', 
+          image: fruitTea07, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 103, 
+          title: '청포도 자스민티', 
+          description: '쌉싸름한 자스민티에 상큼한 청포도 넣어 청량하고 달콤한 자스민 과일 티', 
+          image: fruitTea08, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 104, 
+          title: '청포도 자스민티 (HOT)', 
+          description: '쌉싸름한 자스민티에 상큼한 청포도 넣어 청량하고 달콤한 자스민 과일 티', 
+          image: fruitTea08, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 105, 
+          title: '패션 프룻 히비스커스', 
+          description: '새콤달콤한 패션 프룻&히비스커스의 조화가 돋보이는 카페인 Free 티', 
+          image: fruitTea09, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 106, 
+          title: '패션 프룻 히비스커스 (HOT)', 
+          description: '새콤달콤한 패션 프룻&히비스커스의 조화가 돋보이는 카페인 Free 티', 
+          image: fruitTea09, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 107, 
+          title: '자몽 주스', 
+          description: '달콤하고 쌉싸름한 자몽의 입자가 느껴지는 달콤한 자몽 주스', 
+          image: fruitTea10, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 108, 
+          title: '공차 망고 주스', 
+          description: '달콤하고 진한 망고의 맛을 느낄 수 있는 공차 망고 주스', 
+          image: rtd01, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 109, 
+          title: '공차 딸기 주스', 
+          description: '국내산 딸기가 함유되어 있어 더욱 상큼달콤하게 즐길 수 있는 공차 딸기 주스', 
+          image: rtd02, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 110, 
+          title: '공차 리치 캐모마일', 
+          description: '리치의 달콤함과 캐모마일의 부드러운 향이 조화롭게 어우러진 블렌딩 티', 
+          image: rtd03, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 111, 
+          title: '공차 트로피컬 히비스커스', 
+          description: '열대과일의 달콤함과 히비스커스의 상쾌한 산미가 어우러진 이국적인 블렌딩 티', 
+          image: rtd04, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 112, 
+          title: '얼그레이 아메리카노', 
+          description: '공차 시그니처 블렌딩 원두와 향긋한 얼그레이티의 조화가 좋은 스페셜 커피 메뉴', 
+          image: coffee01, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 113, 
+          title: '얼그레이 아메리카노 (HOT)', 
+          description: '공차 시그니처 블렌딩 원두와 향긋한 얼그레이티의 조화가 좋은 스페셜 커피 메뉴', 
+          image: coffee01, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 114, 
+          title: '카페 모카', 
+          description: '진한 커피에 공차 초콜렛을 더하고 달콤짭조름한 밀크폼과 함께 즐기는 공차만의 커피 음료', 
+          image: coffee02, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 115, 
+          title: '카페 모카 (HOT)', 
+          description: '진한 커피에 공차 초콜렛을 더하고 달콤짭조름한 밀크폼과 함께 즐기는 공차만의 커피 음료', 
+          image: coffee02, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 116, 
+          title: '아메리카노', 
+          description: '브라질, 콜롬비아 외 대표적인 원두 5가지를 블렌딩하여 찾은 최적의 맛', 
+          image: coffee03, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 117, 
+          title: '아메리카노 (HOT)', 
+          description: '브라질, 콜롬비아 외 대표적인 원두 5가지를 블렌딩하여 찾은 최적의 맛', 
+          image: coffee03, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 118, 
+          title: '카페라떼', 
+          description: '진하고 부드러운 공차의 새로운 커피 (HOT / ICED)​', 
+          image: coffee04, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 119, 
+          title: '카페라떼 (HOT)', 
+          description: '진하고 부드러운 공차의 새로운 커피 (HOT / ICED)​', 
+          image: coffee04, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 120, 
+          title: '바닐라 카페라떼', 
+          description: '진한 커피에 마다가스카르산 바닐라빈이 더해져 달콤하고 깊은 풍미를 느낄 수 있는 공차만의 커피 음료', 
+          image: coffee05, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
+          isJumboAvailable: false
+        },
+        { 
+          id: 121, 
+          title: '공차슈페너', 
+          description: '향긋한 얼그레이티를 넣은 공차만의 블렌딩 아메리카노에 달콤짭조름한 밀크폼을 얹은 스페셜 메뉴', 
+          image: coffee05, 
+          L_price: 'Large 5,700원',
+          L_kcal: '386kcal',
+          warning: '* 알레르기 유발 식품 : 우유, 대두',
+          L_size:'473ml',
+          L_sugar:'41g',
+          L_protein:'1g',
+          L_fat: '9g',
+          L_natrium: '96mg',
+          L_caffeine: '0mg',
+          isLargeAvailable: true,
           isJumboAvailable: false
         }
-       
       ];
     const handleButtonClick = (item) => {
         setSelectedMenu(item)
@@ -522,17 +2104,20 @@ function MenuDrink() {
       };
 
     const menuSections = [
-        { title: '빠다 고구마', items: menuItems.slice(0, 7) },  // 5개의 항목
-        { title: '초코바른 시리즈', items: menuItems.slice(7, 12) },  // 3개의 항목
-        { title: '코코넛 파라다이스 2차', items: menuItems.slice(12, 15) },  // 4개의 항목
-        { title: '미니펄&코코넛', items: menuItems.slice(15, 18) },  // 3개의 항목
-        { title: '납작 복숭아 아이스티', items: menuItems.slice(18, 24) },  // 4개의 항목
-        { title: '공차치노&초당옥수수 밀크티', items: menuItems.slice(24, 26) },  // 4개의 항목
-        { title: '미니펄 스페셜', items: menuItems.slice(26, 34) },  // 4개의 항목
-        { title: '2024 포도 크림치즈폼', items: menuItems.slice(31, 33) },  // 5개의 항목
-        { title: '2024 허니베어', items: menuItems.slice(33, 38) },  // 4개의 항목
-        { title: '2024 미니펄', items: menuItems.slice(38, 41) }  // 4개의 항목
+        { title: 'NEW 시즌메뉴', items: menuItems.slice(0, 45) },  // NEW 시즌메뉴 items
+        { title: '베스트셀러', items: menuItems.slice(45, 53) },  // 베스트셀러 items
+        { title: '밀크티', items: menuItems.slice(53, 70) },  // 밀크티 items
+        { title: '스무디', items: menuItems.slice(70, 81) },  // 스무디 items
+        { title: '오리지널 티', items: menuItems.slice(81, 93) },  // 오리지널 티 items
+        { title: '프룻티&모어', items: menuItems.slice(93, 107) },  // 프룻티&모어 items
+        { title: 'RTD', items: menuItems.slice(107, 111) },  // RTD items
+        { title: '커피', items: menuItems.slice(111, 121) },  // 커피 items
     ];
+
+    const handleCategoryChange = (category) => {
+      setSelectedCategoryBtn(category)
+      setActiveCategory(category); // Change active category when a GNB button is clicked
+  };
     return(
         <main className='menu'>
             <div className='menu_banner'>
@@ -542,36 +2127,47 @@ function MenuDrink() {
 
             <div className='menu_gnb'>
                 <ul>
-                    <li><button>NEW 시즌메뉴</button></li>
-                    <li><button>베스트셀러</button></li>
-                    <li><button>밀크티</button></li>
-                    <li><button>스무디</button></li>
-                    <li><button>오리지널 티</button></li>
-                    <li><button>프룻티&모어</button></li>
-                    <li><button>RTD</button></li>
-                    <li><button>커피</button></li>
+                    <li><button className={selectedCategoryBtn === 'NEW 시즌메뉴' ? 'active' : ''} 
+                    onClick={() => handleCategoryChange('NEW 시즌메뉴')}>NEW 시즌메뉴</button></li>
+                    <li><button className={selectedCategoryBtn === '베스트셀러' ? 'active' : ''} 
+                    onClick={() => handleCategoryChange('베스트셀러')}>베스트셀러</button></li>
+                    <li><button className={selectedCategoryBtn === '밀크티' ? 'active' : ''} 
+                    onClick={() => handleCategoryChange('밀크티')}>밀크티</button></li>
+                    <li><button className={selectedCategoryBtn === '스무디' ? 'active' : ''} 
+                    onClick={() => handleCategoryChange('스무디')}>스무디</button></li>
+                    <li><button className={selectedCategoryBtn === '오리지널 티' ? 'active' : ''} 
+                    onClick={() => handleCategoryChange('오리지널 티')}>오리지널 티</button></li>
+                    <li><button className={selectedCategoryBtn === '프룻티&모어' ? 'active' : ''} 
+                    onClick={() => handleCategoryChange('프룻티&모어')}>프룻티&모어</button></li>
+                    <li><button className={selectedCategoryBtn === 'RTD' ? 'active' : ''} 
+                    onClick={() => handleCategoryChange('RTD')}>RTD</button></li>
+                    <li><button className={selectedCategoryBtn === '커피' ? 'active' : ''} 
+                    onClick={() => handleCategoryChange('커피')}>커피</button></li>
                 </ul>
             </div>
 
-            <h3>NEW 시즌메뉴</h3>
-            
-            {menuSections.map((section, index) => (
-                <div key={index} className='menu_cont_01 menu_default'>
-                    <h4>{section.title}</h4>
-                    <ul>
-                        {section.items.map(item => (
-                            <li key={item.id}>
-                                <button onClick={() => handleButtonClick(item)}>
-                                    <img src={item.image} alt={item.title} />
-                                    <p>{item.title}</p>
-                                </button>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            ))}
+            <div className='change_menu_cont'>
+                <h3>{activeCategory}</h3>
+                {menuSections
+                    .filter(section => section.title === activeCategory) // Filter the content based on the active category
+                    .map((section, index) => (
+                        <div key={index} className='menu_cont_01 menu_default'>
+                             {section.title === 'NEW 시즌메뉴' && <h4>{section.title}</h4>}
+                            <ul>
+                                {section.items.map(item => (
+                                    <li key={item.id}>
+                                        <button onClick={() => handleButtonClick(item)}>
+                                            <img src={item.image} alt={item.title} />
+                                            <p>{item.title}</p>
+                                        </button>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    ))}
+                    
+            </div>
 
-            {/* 팝업 표시 */}
             {selectedMenu && (
                 <Popup
                     content={selectedMenu}

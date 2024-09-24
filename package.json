@@ -58,5 +58,7 @@
     "@svgr/webpack": "^8.1.0",
     "gh-pages": "^6.1.1",
     "sass": "^1.78.0"
+  },  
+    "homepage": "https://sohyun32253.github.io/Gongcha"
   }
-}
+

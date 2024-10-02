@@ -16,7 +16,7 @@ function App() {
 
   return (
     <div className="App">
-       <Router>
+       <Router basename="/Gongcha">
       <div className="App">
         <Header isAuthenticated={isAuthenticated} setIsAuthenticated={setIsAuthenticated}/>
         <Routes>

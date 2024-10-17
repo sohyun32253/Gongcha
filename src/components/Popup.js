@@ -36,28 +36,29 @@ function Popup({ content, onClose }) {
         <div className='popup_bg'>
         </div>
         <button className="popup-close" onClick={onClose}><img src={popupClose} alt="창 닫기" /></button>
-       
         
         <div className='popup_wrap'>
-        <img src={content.image} alt={content.title} />
-            <div className='menu_cont_right'>
-            <h4>{content.title}</h4>
-            <p className='desc'>{content.description}</p>
-            <p className={`price ${isJumboOnly ? 'jumbo-only' : ''}`}>{content.L_price} <span className='price_size'>{content.J_price}</span></p>
-            <p className={`kcal ${isJumboOnly ? 'jumbo-only' : ''}`}>{content.L_kcal} <span className='kcal_size'>{content.J_kcal}</span></p>
-            <p className='warning'>{content.warning}</p>
-            <div className='size_btn'>
-              {content.isLargeAvailable && (
-                <button className={`large ${selectedSize === 'large' ? 'active' : ''}`} 
-                onClick={ () => sizeClick('large')}>L</button>
-              )}
-                {content.isJumboAvailable && (
-                <button className={`jumbo ${selectedSize === 'jumbo' ? 'active' : ''}`} 
-                onClick={ () => sizeClick('jumbo')}>J</button>
-                )}
-            </div>
-            { selectedNut === 'large' && (
-            <div className='nutritional_cont large'>
+          <img src={content.image} alt={content.title} />
+              <div className='menu_cont_right'>
+                <h4>{content.title}</h4>
+                <p className='desc'>{content.description}</p>
+                <p className={`price ${isJumboOnly ? 'jumbo-only' : ''}`}>{content.L_price}</p>
+                <p className='kcal_size'>{content.L_kcal}</p>
+                <p className={`price ${isJumboOnly ? 'jumbo-only' : ''}`}>{content.J_price}</p>
+                <p className='kcal_size'>{content.J_kcal}</p>
+                <p className='warning'>{content.warning}</p>
+                <div className='size_btn'>
+                  {content.isLargeAvailable && (
+                    <button className={`large ${selectedSize === 'large' ? 'active' : ''}`} 
+                    onClick={ () => sizeClick('large')}>L</button>
+                  )}
+                    {content.isJumboAvailable && (
+                    <button className={`jumbo ${selectedSize === 'jumbo' ? 'active' : ''}`} 
+                    onClick={ () => sizeClick('jumbo')}>J</button>
+                    )}
+                </div>
+                { selectedNut === 'large' && (
+                <div className='nutritional_cont large'>
                   <div className='cont_01'>
                       <p>일회제공량 {content.L_size}</p>
                       <p>당류 {content.L_sugar}</p>
@@ -69,11 +70,11 @@ function Popup({ content, onClose }) {
                       <p>나트륨 {content.L_natrium}</p>
                       <p>카페인 {content.L_caffeine}</p>
                   </div>
-          </div>
-            )}
+              </div>
+                )}
 
-            { selectedNut === 'jumbo' && (
-            <div className='nutritional_cont jumbo'>
+                { selectedNut === 'jumbo' && (
+                <div className='nutritional_cont jumbo'>
                   <div className='cont_01'>
                       <p>일회제공량 {content.J_size}</p>
                       <p>당류 {content.J_sugar}</p>
@@ -85,11 +86,11 @@ function Popup({ content, onClose }) {
                       <p>나트륨 {content.J_natrium}</p>
                       <p>카페인 {content.J_caffeine}</p>
                   </div>
+                </div>
+              )}
+              </div>
           </div>
-            )}
         </div>
-        </div>
-      </div>
     </div>
   );
 }

@@ -60,7 +60,7 @@ function Header({ isAuthenticated, setIsAuthenticated }) {
                             <li>
                                 <a href='#none'>Store</a>
                                 <ul>
-                                    <li><a href='#none'>매장 찾기</a></li>
+                                    <li><Link to='./Store'>매장 찾기</Link></li>
                                     <li><a href='#none'>가맹점 개설문의</a></li>
                                 </ul>
                             </li>

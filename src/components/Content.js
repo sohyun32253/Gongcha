@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import CountUp from 'react-countup';
-import { Link } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
@@ -49,6 +49,19 @@ function Content() {
   const ioElementsRef = useRef([]);
   const sectionRef = useRef(null); 
   const [startCount, setStartCount] = useState(false); 
+
+  const [keyword, setKeyword] = useState(""); // 검색어 상태 관리
+  const navigate = useNavigate();
+
+  const handleSearch = (e) => {
+    e.preventDefault(); // 폼 제출 기본 동작 방지
+    if (keyword.trim() === "") {
+      alert("검색어를 입력해주세요!"); // 검색어가 없을 때 경고
+      return;
+    }
+    // 검색어를 쿼리 파라미터로 전달하면서 스토어 페이지로 이동
+    navigate(`/store?keyword=${encodeURIComponent(keyword)}`);
+  };
 
   const scrollToTop = () => {
     window.scrollTo(0, 0); // 즉시 페이지 상단으로 스크롤
@@ -331,9 +344,10 @@ useEffect(() => {
                 <div className='store_left'>
                   <h3>매장 찾기</h3>
                   <p>공차를 쉽고 빠르게 찾아보세요.</p>
-                  <form>
-                    <input type="text" placeholder='매장을 입력하세요' />
-                    <button>
+                  <form onSubmit={handleSearch}>
+                    <input type="text" placeholder='매장을 입력하세요'  
+                    onChange={(e) => setKeyword(e.target.value)} value={keyword}/>
+                    <button type="submit">
                       <img src={search} className='store_right' alt="매장 검색하기" />
                     </button>
                   </form>

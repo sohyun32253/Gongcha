@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import '../HeaderStyle.css';
 import { getAuth, signOut } from 'firebase/auth';
 import { Link } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import h1Logo from '../images/h1_logo.png'
 import h2Logo from '../images/h2_logo.png'
 import menuIcon from '../images/menu.svg'
@@ -11,12 +12,14 @@ function Header({ isAuthenticated, setIsAuthenticated }) {
     const handleLogout = () => {
         const auth = getAuth();
         signOut(auth).then(() => {
+            navigate('/');
             setIsAuthenticated(false); // Update login state on logout
         }).catch((error) => {
             console.error('Logout error:', error);
         });
     };
 
+    const navigate = useNavigate();
     const [isHovered, setIsHovered] = useState(false); 
     const [visible, setVisible] = useState(false);
     const [openMenu, setOpenMenu] = useState(null); 
@@ -96,7 +99,11 @@ function Header({ isAuthenticated, setIsAuthenticated }) {
 
                 <div className='util_menu01'>
                     {isAuthenticated ? (
+                        <>
+                         <Link to='/Mypage'>Mypage</Link>
+                         <span> ㅣ </span>
                         <button onClick={handleLogout}>Log out</button>
+                        </>
                     ) : (
                         <>
                             <Link to='/Login'>Log in</Link>

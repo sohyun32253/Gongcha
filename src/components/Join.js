@@ -16,6 +16,12 @@ function Join() {
 
   const password = watch('password');
 
+  function joinBtnClick(e){
+    e.preventDefault();
+    alert("회원가입에 성공하셨습니다.");
+    
+  }
+
   return (
     <main className='join'>
     <div className='join_banner'>
@@ -45,7 +51,7 @@ function Join() {
         <p>
           <input
             type="password"
-            placeholder="비밀번호"
+            placeholder="8자리 이상의 비밀번호를 입력해주세요."
             {...register('password', {
               required: '비밀번호를 입력해주세요.',
               minLength: {
@@ -70,7 +76,7 @@ function Join() {
           />
         </p>
         {errors.confirmPassword && <p>{errors.confirmPassword.message}</p>}
-      <button type="submit" className='join_btn'>회원가입</button>
+      <button type="submit" className='join_btn' onClick={joinBtnClick}>회원가입</button>
     </form>
     </div>
     </main>

@@ -8,7 +8,6 @@ import h1Login from '../images/h1_logo.png'
 function Login({ setIsAuthenticated }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [rememberMe, setRememberMe] = useState(false);
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
@@ -19,7 +18,7 @@ function Login({ setIsAuthenticated }) {
       await signInWithEmailAndPassword(auth, email, password);
       alert('로그인 성공');
       setIsAuthenticated(true); // Update login state on successful login
-      navigate('/Mypage'); // Redirect after login
+      navigate('/'); // Redirect after login
     } catch (error) {
       alert('로그인 실패: ' + error.message);
     }
@@ -51,17 +50,7 @@ function Login({ setIsAuthenticated }) {
           />
           </p>
 
-          <p>
-            <label className='remember_login'>
-              <input 
-                type="checkbox" 
-                checked={rememberMe} 
-                onChange={(e) => setRememberMe(e.target.checked)
-                } 
-              />
-              로그인 상태 유지
-            </label>
-          </p>
+          
           <button type="submit" className='join_btn'>로그인</button>
         </form>
       </div>

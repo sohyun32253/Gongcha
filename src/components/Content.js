@@ -50,21 +50,21 @@ function Content() {
   const sectionRef = useRef(null); 
   const [startCount, setStartCount] = useState(false); 
 
-  const [keyword, setKeyword] = useState(""); // 검색어 상태 관리
+  const [keyword, setKeyword] = useState(""); 
   const navigate = useNavigate();
 
   const handleSearch = (e) => {
-    e.preventDefault(); // 폼 제출 기본 동작 방지
+    e.preventDefault(); 
     if (keyword.trim() === "") {
-      alert("검색어를 입력해주세요!"); // 검색어가 없을 때 경고
+      alert("검색어를 입력해주세요!"); 
       return;
     }
-    // 검색어를 쿼리 파라미터로 전달하면서 스토어 페이지로 이동
+    
     navigate(`/store?keyword=${encodeURIComponent(keyword)}`);
   };
 
   const scrollToTop = () => {
-    window.scrollTo(0, 0); // 즉시 페이지 상단으로 스크롤
+    window.scrollTo(0, 0); 
   };
 
   const handleSelect = (selectedIndex, e) => {

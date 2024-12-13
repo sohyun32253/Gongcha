@@ -13,20 +13,17 @@ function Header({ isAuthenticated, setIsAuthenticated }) {
         const auth = getAuth();
         signOut(auth).then(() => {
             navigate('/');
-            setIsAuthenticated(false); // Update login state on logout
+            setIsAuthenticated(false); 
         }).catch((error) => {
             console.error('Logout error:', error);
         });
     };
-
     const navigate = useNavigate();
     const [isHovered, setIsHovered] = useState(false); 
     const [visible, setVisible] = useState(false);
     const [openMenu, setOpenMenu] = useState(null); 
-
     const handleMouseEnter = () => setIsHovered(true);
     const handleMouseLeave = () => setIsHovered(false);
-
     const toggleMenu = (menuName) => {
         setOpenMenu(prevMenu => (prevMenu === menuName ? null : menuName));
     };

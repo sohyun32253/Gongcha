@@ -31,7 +31,7 @@ function Join() {
       <div className='join_form'>
       <h1><img src={h1Login} alt="logo" /></h1>
     <form onSubmit={handleSubmit(onSubmit)}>
-     {/* 이메일 */}
+     {}
      <p>
           <input
             type="email"
@@ -47,7 +47,7 @@ function Join() {
         </p>
         {errors.email && <p>{errors.email.message}</p>}
 
-        {/* 비밀번호 */}
+        {}
         <p>
           <input
             type="password"
@@ -63,7 +63,7 @@ function Join() {
         </p>
         {errors.password && <p>{errors.password.message}</p>}
 
-        {/* 비밀번호 확인 */}
+        {}
         <p>
           <input
             type="password"

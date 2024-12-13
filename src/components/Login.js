@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { getAuth, setPersistence, signInWithEmailAndPassword, browserSessionPersistence, browserLocalPersistence } from 'firebase/auth';
-import { auth } from '../firebase';
+import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import '../Login.css'
 import h1Login from '../images/h1_logo.png'
 
@@ -17,8 +16,9 @@ function Login({ setIsAuthenticated }) {
     try {
       await signInWithEmailAndPassword(auth, email, password);
       alert('로그인 성공');
-      setIsAuthenticated(true); // Update login state on successful login
-      navigate('/'); // Redirect after login
+      setIsAuthenticated(true); 
+      navigate('/'); 
+      window.scrollTo(0, 0);
     } catch (error) {
       alert('로그인 실패: ' + error.message);
     }
@@ -49,7 +49,6 @@ function Login({ setIsAuthenticated }) {
             autoComplete="current-password"
           />
           </p>
-
           
           <button type="submit" className='join_btn'>로그인</button>
         </form>

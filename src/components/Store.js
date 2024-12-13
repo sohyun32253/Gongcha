@@ -27,10 +27,8 @@ const KakaoMap = () => {
   const [selectedDistrict, setSelectedDistrict] = useState("");
   const markers = useRef([]);
   const map = useRef(null);
-
   const location = useLocation();
   const [isMapReady, setIsMapReady] = useState(false);
-
   const regions = {
     서울: [
       "강남구",
@@ -272,7 +270,6 @@ const KakaoMap = () => {
     ],
     제주도: ["서귀포시", "제주시"],
   };
-
   const allDistricts = Object.values(regions).flat();
   const debouncedKeyword = useDebounce(keyword, 500);
   const [errorMessage, setErrorMessage] = useState("");
@@ -344,18 +341,16 @@ const KakaoMap = () => {
     ps.keywordSearch(finalKeyword, (data, status) => {
       if (status === kakao.maps.services.Status.OK) {
         setPlaces(data);
-        setErrorMessage(""); // 성공하면 에러 메시지 초기화
+        setErrorMessage(""); 
         displayMarkers(data);
       } else if (status === kakao.maps.services.Status.ZERO_RESULT) {
         setPlaces([]);
-        setErrorMessage("검색 결과가 없습니다."); // 에러 메시지 업데이트
+        setErrorMessage("검색 결과가 없습니다."); 
       } else {
-        setErrorMessage("검색 중 오류가 발생했습니다."); // 기타 오류 처리
+        setErrorMessage("검색 중 오류가 발생했습니다."); 
       }
     });
   };
-  
-  
 
   const displayMarkers = (places) => {
     const kakao = window.kakao;
@@ -415,12 +410,12 @@ const KakaoMap = () => {
 <div id="menu_wrap" className="bg_white">
           <form onSubmit={onSearch}>
             <div>
-              {/* 시/도 선택 */}
+              {}
               <select
                 value={selectedCity}
                 onChange={(e) => {
                   setSelectedCity(e.target.value);
-                  setSelectedDistrict(""); // 시/군/구 초기화
+                  setSelectedDistrict(""); 
                 }}
               >
                 <option value="">시/도 선택</option>
@@ -431,7 +426,7 @@ const KakaoMap = () => {
                 ))}
               </select>
 
-              {/* 시/군/구 선택 */}
+              {}
               <select
                 value={selectedDistrict}
                 onChange={(e) => setSelectedDistrict(e.target.value)}
@@ -450,7 +445,7 @@ const KakaoMap = () => {
                     ))}
               </select>
 
-              {/* 검색어 입력 */}
+              {}
               <div className="search_field"> 
               <input
                 type="text"

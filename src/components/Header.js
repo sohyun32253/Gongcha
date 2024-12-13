@@ -42,19 +42,19 @@ function Header({ isAuthenticated, setIsAuthenticated }) {
                             <li lass="menu">
                                 <a href="#none">Brand</a>
                                 <ul>
-                                    <li><Link to='./BrandAbout'>브랜드 소개</Link></li>
-                                    <li><Link to='./BrandPromise'>공차의 약속</Link></li>
-                                    <li><Link to='./BrandIdentity'>브랜드 아이덴티티</Link></li>
+                                    <li><a href='#none'>브랜드 소개</a></li>
+                                    <li><a href='#none'>공차의 약속</a></li>
+                                    <li><a href='#none'>브랜드 아이덴티티</a></li>
                                 </ul>
                             </li>
 
                             <li>
                                 <a href='#none'>Menu</a>
                                 <ul>
-                                    <li><Link to='./MenuOrder'>주문방법</Link></li>
-                                    <li><Link to='/MenuDrink'>음료</Link></li>
-                                    <li><Link to='./MenuDM'>디저트 &#183; MD</Link></li>
-                                    <li><Link to='./MenuReceipe'>티레시피</Link></li>
+                                    <li><a href='#none'>주문방법</a></li>
+                                    <li><Link to='./MenuDrink'>음료</Link></li>
+                                    <li><a href='#none'>디저트 &#183; MD</a></li>
+                                    <li><a href='#none'>티레시피</a></li>
                                 </ul>
                             </li>
 
@@ -133,7 +133,7 @@ function Header({ isAuthenticated, setIsAuthenticated }) {
                             {openMenu === 'menu' && (
                             <ul>
                                 <li><a href='#none'>주문방법</a></li>
-                                <li><Link to='/MenuDrink.js'>음료</Link></li>
+                                <li><Link to='./MenuDrink'>음료</Link></li>
                                 <li><a href='#none'>디저트 &#183; MD</a></li>
                                 <li><a href='#none'>티레시피</a></li>
                             </ul>
@@ -144,7 +144,7 @@ function Header({ isAuthenticated, setIsAuthenticated }) {
                             <a href='#none' onClick={() => toggleMenu('store')}>Store</a>
                             {openMenu === 'store' && (
                             <ul>
-                                <li><a href='#none'>매장 찾기</a></li>
+                                <li><Link to='./Store'>매장 찾기</Link></li>
                                 <li><a href='#none'>가맹점 개설문의</a></li>
                             </ul>
                             )}

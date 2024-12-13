@@ -40,11 +40,11 @@
 유용한 정보를 얻어갈 수 있어서 저에게 도움이 많이 되는 시간이었습니다. 
 
 ---
+![메인_pc](https://github.com/user-attachments/assets/daae62e3-25c6-45df-9202-aa554c664c87)
+
+![공차서브](https://github.com/user-attachments/assets/27d42036-31a2-4cc0-9b6a-513c293d3263)
 
 
-![메인_pc](https://github.com/user-attachments/assets/2b7671e4-ea4d-4cd0-abf6-8f1f0c50975a)
-
-![공차서브](https://github.com/user-attachments/assets/e67543f1-d43f-4bcb-8bfc-3b5c8f663bf2)
 
 
 

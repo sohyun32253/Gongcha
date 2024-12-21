@@ -10,17 +10,15 @@ function Join() {
     watch,
   } = useForm();
 
-  const onSubmit = (data) => {
-    console.log(data);
-  };
+// 회원가입 성공 메시지
+const onSubmit = (data) => {
+  alert('회원가입에 성공하셨습니다.');
+  console.log(data);
+};
 
   const password = watch('password');
 
-  function joinBtnClick(e){
-    e.preventDefault();
-    alert("회원가입에 성공하셨습니다.");
-    
-  }
+ 
 
   return (
     <main className='join'>
@@ -76,7 +74,7 @@ function Join() {
           />
         </p>
         {errors.confirmPassword && <p>{errors.confirmPassword.message}</p>}
-      <button type="submit" className='join_btn' onClick={joinBtnClick}>회원가입</button>
+      <button type="submit" className='join_btn' >회원가입</button>
     </form>
     </div>
     </main>

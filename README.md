@@ -46,6 +46,11 @@
 
 
 
+#### 로그인 테스트 id 및 pwd
+id: dully1234@naver.com
+pwd: 12345678
 
+id: heedong1111@gmail.com
+pwd: 11111111
 
 

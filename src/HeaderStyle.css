@@ -151,8 +151,6 @@ h1 img{
     display: none;
 }
 
-
-
 .header h2{
     text-align: center;
     margin-bottom: 20px;
@@ -236,23 +234,22 @@ h2 img{
     .hamburger_menu>button{
         display: inline-block;
     }
-    
 }
 
 
 /* mobile ver */
 @media screen and (max-width:767px){
-    .header_cont{
-        height: 80px;
-    }
-    h1{
-        left: 10px;
-        top: 13px;
-    }
-   .gnb{display: none;}
-   .util_menu01{display: none;}
-   .hamburger_menu>button{
-    display: inline-block;
+.header_cont{
+    height: 80px;
+}
+h1{
+    left: 10px;
+    top: 13px;
+}
+.gnb{display: none;}
+.util_menu01{display: none;}
+.hamburger_menu>button{
+display: inline-block;
 }
 .util_menu02{
     border-top: 1px solid #666666;
@@ -261,15 +258,13 @@ h2 img{
     font-size: 20px;
     color: #ffffff;
     display: block;
+    text-align: center;
 }  
-.util_menu02 a{
-    width: 100%;
-    display: flex;
-    border-right: none;
-    padding:20px 0;
-    box-sizing: border-box;
-}
 
+.util_menu02>div{
+    width: 100%;
+    margin-bottom: 20px;
+}  
 
 }
 

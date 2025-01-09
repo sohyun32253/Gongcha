@@ -10,15 +10,11 @@ function Join() {
     watch,
   } = useForm();
 
-// 회원가입 성공 메시지
 const onSubmit = (data) => {
   alert('회원가입에 성공하셨습니다.');
   console.log(data);
 };
-
   const password = watch('password');
-
- 
 
   return (
     <main className='join'>

@@ -292,12 +292,25 @@ const KakaoMap = () => {
       markers.current.forEach((marker) => marker.setMap(null));
     };
   }, []);
+  
 
   useEffect(() => {
     const query = new URLSearchParams(location.search);
     const mainkeyword = query.get("keyword");
 
     if (mainkeyword) {
+      const targetElement = document.querySelector('.map_wrap_cont');
+      if (targetElement) {
+        const elementTop = targetElement.offsetTop; 
+        const elementHeight = targetElement.offsetHeight; 
+        const viewportHeight = window.innerHeight;
+        const scrollPosition = elementTop + elementHeight / 2 - viewportHeight / 2;
+  
+        window.scrollTo({
+          top: scrollPosition,
+          behavior: 'smooth',
+        });
+      }
       setKeyword(mainkeyword);
       searchPlaces(mainkeyword);
     }

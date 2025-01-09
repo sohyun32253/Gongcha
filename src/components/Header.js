@@ -9,6 +9,8 @@ import menuIcon from '../images/menu.svg'
 import CloseIcon from '../images/close.svg'
 
 function Header({ isAuthenticated, setIsAuthenticated }) {
+    const navigate = useNavigate();
+    
     const handleLogout = () => {
         const auth = getAuth();
         signOut(auth).then(() => {
@@ -18,7 +20,7 @@ function Header({ isAuthenticated, setIsAuthenticated }) {
             console.error('Logout error:', error);
         });
     };
-    const navigate = useNavigate();
+    
     const [isHovered, setIsHovered] = useState(false); 
     const [visible, setVisible] = useState(false);
     const [openMenu, setOpenMenu] = useState(null); 
@@ -31,6 +33,10 @@ function Header({ isAuthenticated, setIsAuthenticated }) {
     function PopupMenu() {
         setVisible(!visible);
     }
+
+      const handleNonAuthenticatedClick = (event) => {
+        navigate('/Login');  
+    };
 
     return(
         <header className='header'>
@@ -182,13 +188,32 @@ function Header({ isAuthenticated, setIsAuthenticated }) {
                         </li>
                     </ul>
 
-                        <div className='util_menu02'>
-                            <a href='#none'>가맹문의</a>
-                            <a href='#none'>고객 상담</a>
-                            <Link to='/Login'>Log in</Link>
-                            <Link to='/Join'>Join</Link>
-                        </div>
+                        <div className='util_menu02'> 
+                            <div>
+                                <a href='#none'>가맹문의</a>
+                                <a href='#none'>고객문의</a>  
+                            </div>
+                           
+                           <div>
+                                <Link to='/Login'>Log in</Link>
+                                <Link to='/Join'>Join</Link>
+                           </div>
+                           
+                           <div>
 
+                            {isAuthenticated ? (
+                                <>
+                                    <a href='#none' onClick={handleLogout}>Log out</a>
+                                    <Link to='/Mypage'>My page</Link>
+                                </>
+                            ) : (
+                                <>
+                                    <a href='#none' onClick={handleNonAuthenticatedClick}>Log out</a>
+                                    <a href='#none' onClick={handleNonAuthenticatedClick}>My page</a>
+                                </>
+                            )}
+                        </div>
+                        </div>
                         <button onClick={PopupMenu} className='close_btn'><img src={CloseIcon} alt="메뉴닫기" /></button>
                 </div> 
             </div>

@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Gongcha/static/css/main.9964ee6d.css",
-    "main.js": "/Gongcha/static/js/main.da1896dc.js",
+    "main.js": "/Gongcha/static/js/main.6e3c38cc.js",
     "static/js/453.0c8c995b.chunk.js": "/Gongcha/static/js/453.0c8c995b.chunk.js",
     "static/media/main_03.jpg": "/Gongcha/static/media/main_03.94e2379086f46187715f.jpg",
     "static/media/sns_04.png": "/Gongcha/static/media/sns_04.48fcbcce6d61489eb0ce.png",
@@ -132,11 +132,11 @@
     "static/media/menu.svg": "/Gongcha/static/media/menu.4c1c461ef432bec9a0be28d5f829884e.svg",
     "static/media/arrow_up.svg": "/Gongcha/static/media/arrow_up.a4e18cb2d33a7730a64a15cb03d83fe4.svg",
     "main.9964ee6d.css.map": "/Gongcha/static/css/main.9964ee6d.css.map",
-    "main.da1896dc.js.map": "/Gongcha/static/js/main.da1896dc.js.map",
+    "main.6e3c38cc.js.map": "/Gongcha/static/js/main.6e3c38cc.js.map",
     "453.0c8c995b.chunk.js.map": "/Gongcha/static/js/453.0c8c995b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9964ee6d.css",
-    "static/js/main.da1896dc.js"
+    "static/js/main.6e3c38cc.js"
   ]
 }

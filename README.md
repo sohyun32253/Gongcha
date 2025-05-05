@@ -21,7 +21,7 @@
 
 
 #### 기획서 링크 : https://docs.google.com/presentation/d/1fqL8HC99VYc21IRYkY7RmP6n1_zODk4DQ60MtMVKbjA/edit?usp=sharing
-#### 코드 관리 : https://plant-paddleboat-f1c.notion.site/Gongcha-15b2cfe0732380999cf4f896f714e0a6?pvs=4
+
 
 
 #### 주요 기능 소개:

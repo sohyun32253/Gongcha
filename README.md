@@ -25,7 +25,7 @@
 ---
 
 ## 🛠 기술 스택
-- **Frontend**: React, Vite, JavaScript (ES6+), HTML5, CSS3, Tailwind CSS  
+- **Frontend**: React, Vite, JavaScript (ES6+), HTML5, CSS3,
 - **API / Library**: Swiper, React-CountUp, Kakao Map API  
 - **Database / Hosting**: Firebase (Auth, Hosting)  
 - **Version Control**: Git, GitHub  
@@ -57,8 +57,6 @@
 ## 📄 기획서
 👉 [기획서 보기 (Google Slides)](https://docs.google.com/presentation/d/1fqL8HC99VYc21IRYkY7RmP6n1_zODk4DQ60MtMVKbjA/edit?usp=sharing)
 
-## 💻 깃허브 레포지토리
-👉 [https://github.com/sohyun32253/Gongcha](https://github.com/sohyun32253/Gongcha)
 
 ---
 

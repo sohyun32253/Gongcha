@@ -25,7 +25,7 @@
 ---
 
 ## 🛠 기술 스택
-- **Frontend**: React, Vite, JavaScript (ES6+), HTML5, CSS3,
+- **Frontend**: React, Vite, JavaScript (ES6+), HTML5, CSS3
 - **API / Library**: Swiper, React-CountUp, Kakao Map API  
 - **Database / Hosting**: Firebase (Auth, Hosting)  
 - **Version Control**: Git, GitHub  
@@ -84,5 +84,5 @@
 실무 강사님의 **기획서 작성**과 **1:1 코드 리뷰** 과정을 거치며 실제 기업 작업 흐름을 체험할 수 있었고,  
 UI 개선을 넘어 **기획 의도에 맞는 화면 구성**을 고민하는 좋은 경험이 되었습니다.  
 
----
+
 

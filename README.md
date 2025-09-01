@@ -22,7 +22,7 @@
 ## 🛠 기술 스택
 - **Frontend**: React, Vite, JavaScript (ES6+), HTML5, CSS3
 - **API / Library**: Swiper, React-CountUp, Kakao Map API  
-- **Database / Hosting**: Firebase (Auth, Hosting)  
+- **Database / Hosting**: Firebase, Github Page  
 - **Version Control**: Git, GitHub  
 
 ---

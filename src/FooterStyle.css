@@ -36,19 +36,26 @@
     width: 68px;
 }
 
-.fc_top ul{
+.fc_top{
     display: flex;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
-.fc_top ul li{
-    padding: 0 20px;
-    box-sizing: border-box;
+.fc_top>div{
+    display: flex;
+}
+
+.fc_top>div>p{
     border-right: 1px solid #ffffff;
+    padding: 0 20px;
 }
 
-.fc_top ul li:last-child{
-    border: none;
+.fc_top> .last > p:last-child{
+    border-right: none;
+}
+
+.center > p:last-child{
+    font-weight: bold;
 }
 
 .fw{
@@ -83,23 +90,28 @@
 
 /* tablet pc ver */
 @media (min-width:768px) and (max-width:1279px){
+    .footer{
+        width: 100%;
+    }
     .footer_cont{
-        width: 767px;
-    }
-
-    .fc_top ul{
-        flex-wrap: wrap; /* 줄바꿈 가능하게 설정 */
-        margin-bottom: 30px;
-    }
-
-    .fc_top ul li{
-        margin-bottom: 10px;
+        width: 100%;
+        min-width: auto;
+        padding: 40px 30px 20px;
         box-sizing: border-box;
-        white-space: nowrap; /* 글자들이 줄바꿈되지 않도록 설정 */
+          position: relative;
+    }
+    .fc_top{
+        margin-bottom: 20px;
     }
 
-    .fc_top ul li:nth-child(4){
-        border: none;
+    .fc_top>div>p{
+        border-right: 1px solid #ffffff;
+        padding: 0 10px;
+        
+    }
+
+    .fc_top>div>p>a{
+        font-size: 14px;
     }
 
     .address{
@@ -114,8 +126,42 @@
 
     .sns{
         position: absolute;
-        right: 0;
+        right: 40px;
        bottom:20px;
+    }
+       .fc_top {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 12px 28px;
+    }
+
+    .fc_top > div {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+    }
+
+    .fc_top p {
+        margin: 0;
+        white-space: nowrap;
+    }
+
+    .fc_top a {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+    .fc_top .first {
+        order: 1;
+    }
+
+    .fc_top .center {
+        order: 2;
+    }
+
+    .fc_top .last {
+        order: 3;
     }
 }
 
@@ -131,24 +177,23 @@
         margin: 0 auto 20px;
     }
 
-    .fc_top ul{
-        display: block;
-        margin-bottom: 30px;
-        text-align: center;
+    .fc_top{
+        display: block; 
     }
 
-    .fc_top ul li{
-        margin-bottom: 10px;
-        padding: 0;
-        box-sizing: border-box;
-        border-right: none;
+    .fc_top > div{
+        margin-bottom: 10px; 
+        justify-content: center;
     }
 
-    .fc_top ul li:last-child{
-        border-bottom: 1px solid #bebebe;
-        padding-bottom: 20px;
+    .fc_top> div > p:last-child{
+         border-right: none;
     }
 
+    .fc_top > div > p > a{
+        font-size: 14px;
+    }
+    
     .address{
         display: block;
         margin-bottom: 20px;

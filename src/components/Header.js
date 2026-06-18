@@ -121,100 +121,132 @@ function Header({ isAuthenticated, setIsAuthenticated }) {
                 <button onClick={PopupMenu}><img src={menuIcon} alt="menu" className='menu'/></button>
                 
                 <div className={`main_go_to ${visible ? 'show' : 'hide'}`}>
-                    <h2><img src={h2Logo} alt="Gongcha logo" /></h2>
-                    <ul>
-                        <li>
-                            <a href='#none' onClick={(e) => {e.preventDefault(); toggleMenu('brand');}}>Brand</a>
-                            {openMenu === 'brand' && (
-                            <ul>
-                                <li><a href='#none'>브랜드 소개</a></li>
-                                <li><a href='#none'>공차의 약속</a></li>
-                                <li><a href='#none'>브랜드 아이덴티티</a></li>
-                            </ul>
-                            )}
-                        </li>
+                    <h2>
+                        <img src={h2Logo} alt="Gongcha logo" className='logo' />
+                    </h2>
 
-                        <li>
-                            <a href='#none' onClick={() => toggleMenu('menu')}>Menu</a>
-                            {openMenu === 'menu' && (
-                            <ul>
-                                <li><a href='#none'>주문방법</a></li>
-                                <li><Link to='./MenuDrink'>음료</Link></li>
-                                <li><a href='#none'>디저트 &#183; MD</a></li>
-                                <li><a href='#none'>티레시피</a></li>
-                            </ul>
-                            )}
-                        </li>
+                    <div className='gnb_detail_wrap'>
+                        <ul className='gnb_detail'>
+                            <li>
+                                <a href='#none' onClick={(e) => {
+                                    e.preventDefault();
+                                    toggleMenu('brand');
+                                }}>
+                                    Brand
+                                </a>
+                                {openMenu === 'brand' && (
+                                    <ul>
+                                        <li><a href='#none'>브랜드 소개</a></li>
+                                        <li><a href='#none'>공차의 약속</a></li>
+                                        <li><a href='#none'>브랜드 아이덴티티</a></li>
+                                    </ul>
+                                )}
+                            </li>
 
-                        <li>
-                            <a href='#none' onClick={() => toggleMenu('store')}>Store</a>
-                            {openMenu === 'store' && (
-                            <ul>
-                                <li><Link to='./Store'>매장 찾기</Link></li>
-                                <li><a href='#none'>가맹점 개설문의</a></li>
-                            </ul>
-                            )}
-                        </li>
+                            <li>
+                                <a href='#none' onClick={(e) => {
+                                    e.preventDefault();
+                                    toggleMenu('menu');
+                                }}>
+                                    Menu
+                                </a>
+                                {openMenu === 'menu' && (
+                                    <ul>
+                                        <li><a href='#none'>주문방법</a></li>
+                                        <li><Link to='/MenuDrink'>음료</Link></li>
+                                        <li><a href='#none'>디저트 &#183; MD</a></li>
+                                        <li><a href='#none'>티레시피</a></li>
+                                    </ul>
+                                )}
+                            </li>
 
-                        <li>
-                            <a href='#none' onClick={() => toggleMenu('membership')}>Membership</a>
-                            {openMenu === 'membership' && (
-                            <ul>
-                                <li><a href='#none'>공차 멤버십</a></li>
-                                <li><a href='#none'>공차 카드 &#38; e-Gift</a></li>
-                                <li><a href='#none'>FAQ</a></li>
-                            </ul>
-                            )}
-                        </li>
+                            <li>
+                                <a href='#none' onClick={(e) => {
+                                    e.preventDefault();
+                                    toggleMenu('store');
+                                }}>
+                                    Store
+                                </a>
+                                {openMenu === 'store' && (
+                                    <ul>
+                                        <li><Link to='/Store'>매장 찾기</Link></li>
+                                        <li><a href='#none'>가맹점 개설문의</a></li>
+                                    </ul>
+                                )}
+                            </li>
 
-                        <li>
-                            <a href='#none' onClick={() => toggleMenu('benefit')}>Benefit</a>
-                            {openMenu === 'benefit' && (
-                            <ul>
-                                <li><a href='#none'>통신사 제휴</a></li>
-                                <li><a href='#none'>결제 서비스</a></li>
-                            </ul>
-                            )}
-                        </li>
+                            <li>
+                                <a href='#none' onClick={(e) => {
+                                    e.preventDefault();
+                                    toggleMenu('membership');
+                                }}>
+                                    Membership
+                                </a>
+                                {openMenu === 'membership' && (
+                                    <ul>
+                                        <li><a href='#none'>공차 멤버십</a></li>
+                                        <li><a href='#none'>공차 카드 &#38; e-Gift</a></li>
+                                        <li><a href='#none'>FAQ</a></li>
+                                    </ul>
+                                )}
+                            </li>
 
-                        <li>
-                            <a href='#none' onClick={() => toggleMenu('eventNews')}>Event&#38;News</a>
-                            {openMenu === 'eventNews' && (
-                            <ul>
-                                <li><a href='#none'>이벤트</a></li>
-                                <li><a href='#none'>공차소식</a></li>
-                            </ul>
-                            )}
-                        </li>
-                    </ul>
+                            <li>
+                                <a href='#none' onClick={(e) => {
+                                    e.preventDefault();
+                                    toggleMenu('benefit');
+                                }}>
+                                    Benefit
+                                </a>
+                                {openMenu === 'benefit' && (
+                                    <ul>
+                                        <li><a href='#none'>통신사 제휴</a></li>
+                                        <li><a href='#none'>결제 서비스</a></li>
+                                    </ul>
+                                )}
+                            </li>
 
-                        <div className='util_menu02'> 
-                            <div>
+                            <li>
+                                <a href='#none' onClick={(e) => {
+                                    e.preventDefault();
+                                    toggleMenu('eventNews');
+                                }}>
+                                    Event&#38;News
+                                </a>
+                                {openMenu === 'eventNews' && (
+                                    <ul>
+                                        <li><a href='#none'>이벤트</a></li>
+                                        <li><a href='#none'>공차소식</a></li>
+                                    </ul>
+                                )}
+                            </li>
+                        </ul>
+
+                        <div className='util_menu02'>
+                            <div className='util_group inquiry'>
                                 <a href='#none'>가맹문의</a>
-                                <a href='#none'>고객문의</a>  
+                                <a href='#none'>고객문의</a>
                             </div>
-                           
-                           <div>
-                                <Link to='/Login'>Log in</Link>
-                                <Link to='/Join'>Join</Link>
-                           </div>
-                           
-                           <div>
 
-                            {isAuthenticated ? (
-                                <>
-                                    <a href='#none' onClick={handleLogout}>Log out</a>
-                                    <Link to='/Mypage'>My page</Link>
-                                </>
-                            ) : (
-                                <>
-                                    <a href='#none' onClick={handleNonAuthenticatedClick}>Log out</a>
-                                    <a href='#none' onClick={handleNonAuthenticatedClick}>My page</a>
-                                </>
-                            )}
+                            <div className='util_group auth'>
+                                {isAuthenticated ? (
+                                    <>
+                                        <button type='button' onClick={handleLogout}>Log out</button>
+                                        <Link to='/mypage'>My page</Link>
+                                    </>
+                                ) : (
+                                    <>
+                                        <Link to='/login'>Log in</Link>
+                                        <Link to='/join'>Join</Link>
+                                    </>
+                                )}
+                            </div>
                         </div>
-                        </div>
-                        <button onClick={PopupMenu} className='close_btn'><img src={CloseIcon} alt="메뉴닫기" /></button>
+                    </div>
+
+                    <button onClick={PopupMenu} className='close_btn'>
+                        <img src={CloseIcon} alt="메뉴닫기" />
+                    </button>
                 </div> 
             </div>
             <div className={`gnb_bg ${isHovered ? 'slide-down' : ''}`} ></div>

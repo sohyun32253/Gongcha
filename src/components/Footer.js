@@ -12,15 +12,19 @@ function Footer() {
             <h2><img src={h1Logo} alt="Gongcha logo" /></h2>
             <div className='footer_center'>
                 <div className='fc_top'>
-                    <ul>
-                        <li><a href="#none">회사소개</a></li>
-                        <li><a href="#none">제휴&#47;제안</a></li>
-                        <li><a href="#none">고객센터</a></li>
-                        <li className='fw'><a href="#none">개인정보처리방침</a></li>
-                        <li><a href="#none">이메일무단수집거부</a></li>
-                        <li><a href="#none">윤리규범 실천지침</a></li>
-                        <li><a href="#none">HOT&#45;LINE</a></li>
-                    </ul>
+                    <div className= "first">
+                        <p><a href="#none">회사소개</a></p>
+                        <p><a href="#none">제휴&#47;제안</a></p>
+                        <p><a href="#none">고객센터</a></p>
+                    </div>
+                    <div className= "center">
+                        <p><a href="#none">개인정보처리방침</a></p>
+                        <p><a href="#none">이메일무단수집거부</a></p>
+                    </div>
+                    <div className= "last">
+                        <p><a href="#none">윤리규범 실천지침</a></p>
+                        <p><a href="#none">HOT&#45;LINE</a></p>
+                    </div>
                 </div>
                 <div className='fc_bottom'>
                     <div className='address'>

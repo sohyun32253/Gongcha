@@ -72,7 +72,6 @@ function MyPage() {
           onClick={() => membershipClick('mycard_btn')}>My 공차 카드</button></li>
       </ul>
 
-   
       <div className='mypage_cont'>
         <img src={mypage01} alt="logo" />
         {selectedMembershipCont === 'mycard_btn' &&(
@@ -85,8 +84,6 @@ function MyPage() {
           </div>
        </div>
     )}
-
-     
 
       {selectedMembershipCont === 'membership_btn' && (
       <div className='mb_change_cont'>
@@ -144,23 +141,18 @@ function MyPage() {
                 </div>
               </div> 
               </div>)} 
-             
-            
-
             <div className='my_coupon'>
                 
             </div>
           </div>
       </div>
       
-
       <div className='stamp_info'>
         <div className='service'>
           <h4>공차 스탬프 카드</h4>
           <p>카드 유효기간 : 2024.09.06~2025.03.04</p>
           <p>스탬프 10개 적립 시 무료 음료 1잔 쿠폰 제공</p> 
         </div>
-      
 
         <div className='reward'>
           <h4>스탬프 적립 안내</h4>

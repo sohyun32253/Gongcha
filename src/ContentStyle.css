@@ -57,8 +57,6 @@ section{
     transform: scale(1);
     opacity: 1;
 }
-
-
 .quick_menu{
     position: fixed;
     z-index: 100;
@@ -118,78 +116,6 @@ section{
     opacity: 0;
 }
 
-
-/*
-
-.top_btn{
-    border: none;
-    background: none;  
-}
-
-.main .quick_menu li:last-child{
-    background: #ffffff;
-    border: 1px solid #C30F30;
-}
-
-.main .quick_menu li:last-child .btn_txt_top{
-    color: #C30F30;
-} 
-
-.btn_txt_top{
-    position: absolute;
-    bottom: 20px;
-    left: 30px;
-    color: #ffffff;
-}
-
-.btn_flex{
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-}
-
-.btn_hidden{
-    position: absolute;
-    top: 30px;
-    left: -100px; 
-    white-space: nowrap;
-    transition: left 0.3s ease; 
-}
-
-.btn_txt{
-    position: absolute;
-    bottom: 18px;
-    left: 14px;
-    font-size: 14px;
-}
-
-.btn_txt_last{
-    position: absolute;
-    bottom: 18px;
-    left: 18px;
-}
-
-.btn_hover a{
-    display: block;
-}
-
-
-
-.btn_hover:hover {
-    width: 180px; 
-}
-
-.btn_hover:hover .btn_hidden {
-    left: 0; 
-}
-
-
-.btn_hover:hover .btn_content {
-    transform: translateX(90px); 
-}
-*/
-/* new_menu */
-
 .new_menu_cont{
     max-width: 1280px; 
     overflow: hidden;
@@ -219,7 +145,7 @@ section{
     font-size: 18px;
 }
 .swiper-wrapper {
-    display: flex; /* 슬라이드가 수평으로 정렬되도록 합니다. */
+    display: flex; 
 }
 
 .swiper-container{
@@ -229,7 +155,7 @@ section{
 .swiper-slide-active img {
     opacity: 1;
     margin-bottom: 100px;
-    transform: scale(1.5); /* 이미지를 20% 더 크게 */
+    transform: scale(1.5); 
 }
 
 .swiper-slide-active p{
@@ -397,12 +323,16 @@ dt{
     color: #ffffff;
     font-size: 28px;
     font-weight: bold;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .order_store_cont{
     width: 1280px;
     margin: 0 auto;
+}
+
+.order_store_container{
+    padding: 0 40px;
 }
 
 .order_store_cont button img{
@@ -433,6 +363,7 @@ dt{
 
 .order_left{
     width: 255px;
+    position: relative;
 }
 
 .order button{
@@ -456,7 +387,10 @@ dt{
     font-weight: bold;
     transition: all 0.3s;
 }
-
+    .order button{
+        left: 0;
+      bottom: 20px;
+    }
 
 .order button span{
     margin-left: 45px;
@@ -474,6 +408,10 @@ dt{
     position: relative;
 }
 
+.store_left{
+    position: relative;
+}
+
 .store h3{
     font-size: 28px;
     font-weight: bold;
@@ -487,7 +425,7 @@ dt{
 }
 
 .store p{
-    margin-bottom: 68px;
+    margin-bottom: 40px;
 }
 
 .store form{
@@ -495,6 +433,7 @@ dt{
 }
 
 .store input{
+    position: relative;
     width: 275px;
     padding: 10px 20px;
     box-sizing: border-box;
@@ -596,6 +535,7 @@ dt{
     overflow: hidden;
     width: 290px;
     margin-right: 40px;
+    border-radius: 10px;
 }
 
 .cont_wrap>div>div>a{
@@ -615,7 +555,6 @@ dt{
     display: flex;
 }
 
-
 /* tablet pc ver */
 @media (min-width:768px) and (max-width:1279px){
 
@@ -634,6 +573,7 @@ dt{
     .tea_receipe_cont{
         max-width: 768px;
         margin: 0 auto;
+        padding: 0 40px;
         text-align: center;
     }
 
@@ -653,33 +593,48 @@ dt{
 
     .tea_receipe_cont button{
         bottom: 0;
-        right: 270px;
+        right: 34.5%;
     }
 
     .order_store_cont{
-        max-width: 620px;
+        width: 100%;
     }
 
     .order_store_wrap {
-        display: block;
-        margin: 0 auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .order{
-        width: 620px;
+        width: min(88%, 900px);
+        min-height: 280px;
+        padding: 32px;
         margin-bottom: 60px;
+        justify-content: space-around;
+        padding-left: clamp(40px, 6vw, 90px);
     }
 
     .store{
-        width: 620px;
+        width: min(88%, 900px);
+        min-height: 280px;
+        padding: 32px;
+        justify-content: space-around;
+        padding-left: clamp(40px, 6vw, 90px);
     }
 
     .global{
         display: none;
     }
 
+    .order_left img{
+    width: clamp(140px, 18vw, 220px);
+    }
+
     .sns_cont{
-       max-width: 768px;
+       width: 88%;
+       padding: 0 20px;
         margin: 0 auto;
         text-align: center;
     }
@@ -693,30 +648,50 @@ dt{
         display:block;
     }
 
+    .cont_wrap>div>div{
+        width: 44%;
+        margin: 0;
+    }
+
     .cont_top{
-        justify-content: space-evenly;
-        margin-bottom: 60px;
+        justify-content: space-around;
+        margin-bottom: 4%;
     }
 
     .cont_top div{
-        width: 290px;
+        width: 100%;
     }
 
     .cont_bottom{
-        justify-content: space-evenly;
+        justify-content: space-around;
     }
 
     .cont_bottom div{
-        width: 290px;
+        width: 100%;
+    }
+
+    .sns_cont img{
+        width: 100%;
+        height: auto;
+    }
+
+    .sns_insta{
+        padding-top:0;
     }
 }
 
-
 /* mobile ver */
 @media screen and (max-width:767px){
+    h2{
+        font-size: 24px;
+    }
 
     .quick_menu{
         display: none;
+    }
+
+    .new_menu p{
+        font-size: 16px;
     }
 
     .swiper-button-prev:after {
@@ -732,10 +707,22 @@ dt{
         text-align: center;
     }
 
+    .tea_receipe_cont dt{
+        font-size: 20px;
+    }    
+
+    .tea_receipe_cont dl{
+        font-size: 14px;
+    }
+
     .tea_btn{
         display: block;
         width: 243px;
         margin: 0 auto 80px;
+    }
+
+    .tea_btn a{
+        font-size: 16px;
     }
 
     .tea_btn .tea_01, .tea_btn .tea_02{
@@ -764,6 +751,13 @@ dt{
     .tea_receipe_cont button{
         bottom: 0;
         right: 130px;
+    }
+    .order_left h3,.store_left h3{
+        font-size: 20px;
+    }
+
+    .order_left p, .store_left p{
+        font-size: 14px;
     }
 
     .order_store_cont{
@@ -848,13 +842,13 @@ dt{
 
     .sns_cont{
         max-width: 375px;
-         margin: 0 auto;
-         text-align: center;
+        margin: 0 auto;
+        text-align: center;
      }
  
      .cont_wrap{
-         display: block;
-         width: 100%;
+        display: block;
+        width: 100%;
      }
 
      .cont_top{

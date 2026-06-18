@@ -312,7 +312,7 @@ useEffect(() => {
             </dl>
           </div>)}
 
-            { selectedTea === 'tea_03'&& (
+          { selectedTea === 'tea_03'&& (
           <div className='cont_03'>
             <img src={teaReceipe03} alt="푸룻티 레시피" />
             <dl>
@@ -329,14 +329,15 @@ useEffect(() => {
 
     <section className='order_store'>
         <div className='order_store_cont'>
+          <div className='order_store_container'>
         <h2 ref={(el) => (h2Refs.current[2] = el)} className='slide-up'>order & store</h2>
           <div className='order_store_wrap' data-io="fade-in">
             <div className='order'>
                 <div className='order_left'>
                   <h3>주문하기</h3>
                   <p>토핑, 당도, 얼음량을 조절하여 <br />나만의 메뉴를 만들어보세요.</p>
+                  <button>자세히 보기 <span> > </span></button>
                 </div>
-                <button>자세히 보기 <span> > </span></button>
                 <img src={order01} alt="음료 이미지" />
             </div>
 
@@ -354,6 +355,7 @@ useEffect(() => {
                 </div>
                 <img src={store01} alt="공차 로고" />
               </div>
+          </div>
           </div>
         </div>
     </section>

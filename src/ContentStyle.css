@@ -703,7 +703,8 @@ dt{
     }
 
     .tea_receipe_cont{
-        width: 100%;
+        padding: 0 40px;
+        width: auto;
         text-align: center;
     }
 
@@ -745,12 +746,12 @@ dt{
 
     .change_cont>div>img{
         margin-bottom: 40px;
-        width: 100%;
+        width: 300px;
     }
 
     .tea_receipe_cont button{
-        bottom: 0;
-        right: 130px;
+        position:static;
+        margin: 0 auto;
     }
     .order_left h3,.store_left h3{
         font-size: 20px;
@@ -790,7 +791,6 @@ dt{
     }
 
     .order button{
-        width: 250px;
         display: flex; 
         align-items: center; 
         justify-content: center; 

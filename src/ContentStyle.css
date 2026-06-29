@@ -118,7 +118,7 @@ section{
 
 .new_menu_cont{
     max-width: 1280px; 
-    overflow: hidden;
+    overflow: visible;
     margin: 0 auto;
     text-align: center;
 }
@@ -130,6 +130,7 @@ section{
 
 .new_menu_cont img{
     width: 176px;
+    height: auto;
     margin-bottom: 40px;
     display: inline-block;
     transition: transform 0.3s ease-in-out;
@@ -143,6 +144,7 @@ section{
 
 .swiper p{
     font-size: 18px;
+    text-align: center;
 }
 .swiper-wrapper {
     display: flex; 
@@ -153,9 +155,10 @@ section{
 }
 
 .swiper-slide-active img {
+    width: 264px;       
+    transform: none;    
     opacity: 1;
-    margin-bottom: 100px;
-    transform: scale(1.5); 
+    /* margin-bottom: 100px; */
 }
 
 .swiper-slide-active p{
@@ -166,18 +169,18 @@ section{
 
 .swiper-button-prev:after {
     position: absolute;
-    top: -70px;
+    top: -80px;
     left: 220px;
 }
 
 .swiper-button-next:after{
     position: absolute;
-    top: -70px;
+    top: -80px;
     right: 220px;
 }
 
 .swiper-button-prev, .swiper-button-next{
-    color: #666666;
+    color: #666666 !important;
 }
 
 .swiper-pagination{

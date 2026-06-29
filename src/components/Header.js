@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import '../HeaderStyle.css';
 import { getAuth, signOut } from 'firebase/auth';
 import { Link } from 'react-router-dom';
@@ -30,8 +30,20 @@ function Header({ isAuthenticated, setIsAuthenticated }) {
         setOpenMenu(prevMenu => (prevMenu === menuName ? null : menuName));
     };
 
+    useEffect(() => {
+        return () => {
+            document.body.classList.remove('header-menu-open');
+            document.body.style.overflow = '';
+        };
+    }, []);
+
     function PopupMenu() {
-        setVisible(!visible);
+        setVisible((prev) => {
+            const next = !prev;
+            document.body.classList.toggle('header-menu-open', next);
+            document.body.style.overflow = next ? 'hidden' : '';
+            return next;
+        });
     }
 
       const handleNonAuthenticatedClick = (event) => {

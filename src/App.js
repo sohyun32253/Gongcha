@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Toaster } from 'react-hot-toast';
 import 'bootstrap/dist/css/bootstrap.css'
 import './App.css';
 import Header from './components/Header'
@@ -28,6 +29,29 @@ function App() {
             <Route path="/Store" element={<Store />} />
           </Routes>
           <Footer />
+          <Toaster
+            position="top-center"
+            toastOptions={{
+              duration: 3000,
+              style: {
+                background: '#333',
+                color: '#fff',
+                fontSize: '15px',
+              },
+              success: {
+                iconTheme: {
+                  primary: '#C30F30',
+                  secondary: '#fff',
+                },
+              },
+              error: {
+                iconTheme: {
+                  primary: '#C30F30',
+                  secondary: '#fff',
+                },
+              },
+            }}
+          />
         </div>
       </Router>
     </div>

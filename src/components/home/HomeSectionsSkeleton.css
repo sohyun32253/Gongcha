@@ -1,0 +1,335 @@
+.home-skeleton-section {
+  width: 100%;
+  padding: 80px 0;
+  box-sizing: border-box;
+}
+
+.home-skeleton-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.home-skeleton-title {
+  max-width: 280px;
+  margin: 0 auto 16px !important;
+  text-align: center;
+  display: block; 
+}
+
+.home-skeleton-subtitle {
+  max-width: 360px;
+  margin: 0 auto 40px !important;
+  text-align: center;
+  display: block; 
+}
+
+/* New menu */
+.home-skeleton-swiper {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.home-skeleton-slide {
+  height: 280px;
+  width: 100%;
+}
+
+/* Tea recipe */
+.home-skeleton-tea {
+  background: #f5eee8;
+}
+
+.home-skeleton-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0;
+  margin-bottom: 32px;
+}
+
+.home-skeleton-tab {
+  width: 243px;
+  height: 44px;
+}
+
+.home-skeleton-tea-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.home-skeleton-tea-image {
+  width: 400px;
+  height: 320px;
+  flex-shrink: 0;
+}
+
+.home-skeleton-tea-text {
+  flex: 1;
+  max-width: 480px;
+}
+
+.home-skeleton-tea-btn {
+  max-width: 200px;
+  margin: 24px auto 0;
+}
+
+/* Order & store */
+.home-skeleton-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.home-skeleton-card {
+  height: 280px;
+}
+
+/* Global */
+.home-skeleton-global-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.home-skeleton-global-text {
+  flex: 1;
+}
+
+.home-skeleton-counts {
+  display: flex;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.home-skeleton-global-map {
+  width: 400px;
+  height: 320px;
+  flex-shrink: 0;
+}
+
+/* SNS */
+.home-skeleton-sns-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.home-skeleton-sns-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.home-skeleton-sns-item {
+  height: 240px;
+}
+
+/* Tablet (768px ~ 1279px) */
+@media (min-width: 768px) and (max-width: 1279px) {
+  .home-skeleton-section {
+    padding: 60px 0;
+  }
+
+  .home-skeleton-inner {
+    max-width: 768px;
+    padding: 0 40px;
+  }
+
+  .home-skeleton-subtitle {
+    margin-bottom: 60px !important;
+  }
+
+  .home-skeleton-swiper {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .home-skeleton-swiper .home-skeleton-slide:nth-child(n + 4) {
+    display: none;
+  }
+
+  .home-skeleton-slide {
+    height: 220px;
+  }
+
+  .home-skeleton-tabs {
+    margin-bottom: 40px;
+  }
+
+  .home-skeleton-tab {
+    width: 200px;
+    height: 40px;
+  }
+
+  .home-skeleton-tea-content {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .home-skeleton-tea-image {
+    width: 100%;
+    max-width: 400px;
+    height: 260px;
+  }
+
+  .home-skeleton-tea-text {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .home-skeleton-cards {
+    grid-template-columns: 1fr;
+    gap: 60px;
+    width: 88%;
+    margin: 0 auto;
+  }
+
+  .home-skeleton-card {
+    height: 280px;
+  }
+
+  .home-skeleton-global-section {
+    display: none;
+  }
+
+  .home-skeleton-sns {
+    padding-top: 0;
+  }
+
+  .home-skeleton-sns-row {
+    gap: 4%;
+  }
+
+  .home-skeleton-sns-item {
+    height: 200px;
+  }
+}
+
+/* Mobile (max 767px) */
+@media screen and (max-width: 767px) {
+  .home-skeleton-section {
+    padding: 48px 0;
+  }
+
+  .home-skeleton-inner {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .home-skeleton-title {
+    max-width: 200px;
+    margin-bottom: 12px !important;
+  }
+
+  .home-skeleton-subtitle {
+    max-width: 280px;
+    margin-bottom: 40px !important;
+  }
+
+  .home-skeleton-swiper {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+
+  .home-skeleton-swiper .home-skeleton-slide:nth-child(n + 2) {
+    display: none;
+  }
+
+  .home-skeleton-slide {
+    height: 200px;
+  }
+
+  .home-skeleton-tabs {
+    flex-direction: column;
+    align-items: center;
+    width: 243px;
+    margin: 0 auto 40px;
+    gap: 0;
+  }
+
+  .home-skeleton-tab {
+    width: 100%;
+    height: 40px;
+    border-radius: 0 !important;
+  }
+
+  .home-skeleton-tab:first-child {
+    border-radius: 22px 22px 0 0 !important;
+  }
+
+  .home-skeleton-tab:last-child {
+    border-radius: 0 0 22px 22px !important;
+  }
+
+  .home-skeleton-tea-content {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .home-skeleton-tea-image {
+    width: 100%;
+    max-width: 300px;
+    height: 220px;
+    margin: 0 auto;
+  }
+
+  .home-skeleton-tea-text {
+    width: 100%;
+  }
+
+  .home-skeleton-cards {
+    grid-template-columns: 1fr;
+    gap: 60px;
+    width: 100%;
+  }
+
+  .home-skeleton-card {
+    height: 240px;
+  }
+
+  .home-skeleton-global-section {
+    display: none;
+  }
+
+  .home-skeleton-sns-row {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    max-width: 290px;
+    margin: 0 auto;
+  }
+
+  .home-skeleton-sns-item {
+    height: 290px;
+  }
+}
+
+/* Small mobile (max 375px) */
+@media screen and (max-width: 375px) {
+  .home-skeleton-inner {
+    padding: 0 16px;
+  }
+
+  .home-skeleton-swiper {
+    max-width: 176px;
+  }
+
+  .home-skeleton-slide {
+    height: 180px;
+  }
+
+  .home-skeleton-sns-row {
+    max-width: 100%;
+  }
+
+  .home-skeleton-sns-item {
+    height: 240px;
+  }
+}

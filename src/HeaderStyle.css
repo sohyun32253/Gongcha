@@ -135,10 +135,13 @@ h1 img{
 }
 
 .main_go_to{
-   position: absolute;
+   position: fixed;
+   z-index: 200;
     top: 0;
     left: 0;
-    width: 100%;   
+    width: 100%;
+    min-height: 100vh;
+    overflow-y: auto;
     padding: 40px;
     box-sizing: border-box;
     background: #412D2D;

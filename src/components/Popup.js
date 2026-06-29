@@ -1,11 +1,11 @@
 import React, { useState,useEffect } from 'react';
 import './Popup.css'
+import LazyImage from './common/LazyImage';
 import popupClose from '../images/close.svg'
 
 function Popup({ content, onClose }) {
     const [selectedSize,setSelectedSize] = useState('null');
     const [selectedNut,setSelectedNut] = useState('null');
-    const [isJumboOnly, setIsJumboOnly] = useState(false); 
 
     useEffect(() => {
       if (content.isLargeAvailable) {
@@ -14,13 +14,6 @@ function Popup({ content, onClose }) {
       } else if (content.isJumboAvailable) {
           setSelectedSize('jumbo');
           setSelectedNut('jumbo');
-      }
-
-       // J 버튼만 있을 경우 상태 설정
-       if (!content.isLargeAvailable && content.isJumboAvailable) {
-        setIsJumboOnly(true);
-      } else {
-        setIsJumboOnly(false);
       }
 
   }, [content.isLargeAvailable, content.isJumboAvailable]);
@@ -38,15 +31,10 @@ function Popup({ content, onClose }) {
         <button className="popup-close" onClick={onClose}><img src={popupClose} alt="창 닫기" /></button>
         
         <div className='popup_wrap'>
-          <img src={content.image} alt={content.title} />
+          <LazyImage src={content.image} alt={content.title} eager />
               <div className='menu_cont_right'>
                 <h4>{content.title}</h4>
                 <p className='desc'>{content.description}</p>
-                <p className={`price ${isJumboOnly ? 'jumbo-only' : ''}`}>{content.L_price}</p>
-                <p className='kcal_size'>{content.L_kcal}</p>
-                <p className={`price ${isJumboOnly ? 'jumbo-only' : ''}`}>{content.J_price}</p>
-                <p className='kcal_size'>{content.J_kcal}</p>
-                <p className='warning'>{content.warning}</p>
                 <div className='size_btn'>
                   {content.isLargeAvailable && (
                     <button className={`large ${selectedSize === 'large' ? 'active' : ''}`} 
@@ -57,6 +45,19 @@ function Popup({ content, onClose }) {
                     onClick={ () => sizeClick('jumbo')}>J</button>
                     )}
                 </div>
+                {selectedNut === 'large' && (
+                  <div className='price_info'>
+                    <p className='price'>{content.L_price}</p>
+                    <p className='kcal_size'>{content.L_kcal}</p>
+                  </div>
+                )}
+                {selectedNut === 'jumbo' && (
+                  <div className='price_info'>
+                    <p className='price'>{content.J_price}</p>
+                    <p className='kcal_size'>{content.J_kcal}</p>
+                  </div>
+                )}
+                <p className='warning'>{content.warning}</p>
                 { selectedNut === 'large' && (
                 <div className='nutritional_cont large'>
                   <div className='cont_01'>

@@ -1,4 +1,5 @@
 import { useForm } from 'react-hook-form';
+import toast from 'react-hot-toast';
 import '../Join.css'
 import h1Login from '../images/h1_logo.png'
 
@@ -11,7 +12,7 @@ function Join() {
   } = useForm();
 
 const onSubmit = (data) => {
-  alert('회원가입에 성공하셨습니다.');
+  toast.success('회원가입에 성공하셨습니다.');
   console.log(data);
 };
   const password = watch('password');

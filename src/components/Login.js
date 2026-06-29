@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
+import toast from 'react-hot-toast';
 import '../Login.css'
 import h1Login from '../images/h1_logo.png'
 
@@ -15,12 +16,12 @@ function Login({ setIsAuthenticated }) {
 
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      alert('로그인 성공');
+      toast.success('로그인되었습니다.');
       setIsAuthenticated(true); 
       navigate('/'); 
       window.scrollTo(0, 0);
     } catch (error) {
-      alert('로그인 실패: ' + error.message);
+      toast.error('로그인에 실패했습니다. 이메일과 비밀번호를 확인해주세요.');
     }
   };
 

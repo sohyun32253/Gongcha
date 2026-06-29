@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import '../Menu.css';
 import Popup from './Popup';
 import NewMenu from './category/NewMenu';
@@ -10,10 +10,44 @@ import FruitTeaMenu from './category/FruitTeaMenu';
 import RtdMenu from './category/RtdMenu';
 import CoffeeMenu from './category/CoffeeMenu';
 
+const CATEGORIES = [
+  'NEW 시즌메뉴',
+  '베스트셀러',
+  '밀크티',
+  '스무디',
+  '오리지널 티',
+  '프룻티&모어',
+  'RTD',
+  '커피',
+];
 
 function MenuDrink() {
   const [selectedCategory, setSelectedCategory] = useState('NEW 시즌메뉴');
   const [selectedMenu, setSelectedMenu] = useState(null);
+  const titleRef = useRef(null);
+  const gnbRef = useRef(null);
+  const isFirstRender = useRef(true);
+
+  useEffect(() => {
+    const title = titleRef.current;
+    if (!title) return;
+
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      title.classList.add('visible');
+      return;
+    }
+
+    title.classList.remove('visible');
+    requestAnimationFrame(() => {
+      title.classList.add('visible');
+    });
+  }, [selectedCategory]);
+
+  useEffect(() => {
+    const activeBtn = gnbRef.current?.querySelector('button.active');
+    activeBtn?.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+  }, [selectedCategory]);
 
   const handleButtonClick = (item) => {
     setSelectedMenu(item);
@@ -57,9 +91,9 @@ function MenuDrink() {
         </div>
       </div>
 
-      <div className='menu_gnb'>
+      <div className='menu_gnb' ref={gnbRef}>
         <ul>
-          {['NEW 시즌메뉴', '베스트셀러', '밀크티', '스무디', '오리지널 티', '프룻티&모어', 'RTD', '커피'].map((category) => (
+          {CATEGORIES.map((category) => (
             <li key={category}>
               <button
                 className={selectedCategory === category ? 'active' : ''}
@@ -73,8 +107,12 @@ function MenuDrink() {
       </div>
 
       <div className='change_menu_cont'>
-        <h3>{selectedCategory}</h3>
-        {renderCategoryComponent()}
+        <h3 ref={titleRef} className='menu-category-title slide-up'>
+          {selectedCategory}
+        </h3>
+        <div key={selectedCategory}>
+          {renderCategoryComponent()}
+        </div>
       </div>
 
       {selectedMenu && <Popup content={selectedMenu} onClose={handleClosePopup} />}
